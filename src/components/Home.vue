@@ -7,6 +7,8 @@ header
     p I mostly write JavaScript but I'm also into HTML and CSS.
     p Ocassionally, I work with Node.js, Express, Pug, MongoDB, and nodemon.
     p And - I use Git all the time.
+section#works
+    h2 stuff i've worked on
 </template>
 
 <script>
@@ -39,5 +41,20 @@ h1 {
 }
 #lil-intro p {
     margin: calc(10px + 1vw);
+}
+#works {
+    position: relative;
+    border-top: 2px solid;
+    margin: calc(90px + 1vw) 0;
+}
+h2 {
+    position: absolute;
+    right: 5vw;
+    top: -21px;
+    margin: 0;
+    padding: 0 calc(10px + 1vw);
+    font-weight: 500;
+    font-size: 32px;
+    background: white;
 }
 </style>
