@@ -9,6 +9,20 @@ header
     p And - I use Git all the time.
 section#works
     h2 stuff i've worked on
+    article
+        #image-container
+            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png")
+        #texts
+            h3 undiluted music
+            p a website that gives users access to stream and download songs.
+            a(href="#") Learn More
+    article
+        #image-container
+            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204937/portfolio/frontend-references-landing-page-screenshot.png")
+        #texts
+            h3 frontend references
+            p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
+            a(href="#") Learn More
 </template>
 
 <script>
@@ -18,6 +32,32 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 800px) {
+    article {
+        grid-template-columns: 500px 1fr;
+    }
+}
+@media screen and (min-width: 650px) and (max-width: 799px) {
+    article {
+        grid-template-columns: 410px 1fr;
+    }
+}
+@media screen and (min-width: 650px) {
+    #image-container {
+        border-right: 1px solid;
+    }
+    #texts {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 649px) {
+    #image-container {
+        border-bottom: 1px solid;
+    }
+    #texts {
+        padding: 20px 10px;
+    }
+}
 header {
     height: calc(100vh - 40px - 2vw);
     padding: calc(20px + 1vw);
@@ -45,7 +85,9 @@ h1 {
 #works {
     position: relative;
     border-top: 2px solid;
+    border-bottom: 2px solid;
     margin: calc(90px + 1vw) 0;
+    padding: calc(40px + 1vw) 30px;
 }
 h2 {
     position: absolute;
@@ -56,5 +98,37 @@ h2 {
     font-weight: 500;
     font-size: 32px;
     background: white;
+}
+article {
+    display: grid;
+    border: 2px solid;
+    width: 100%;
+    box-sizing: border-box;
+}
+article:not(:last-child) {
+    margin-bottom: calc(25px + 1vw);
+}
+#image-container {
+    position: relative;
+    padding-top: 75%;
+}
+img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#texts {
+    display: grid;
+    row-gap: 10px;
+    align-content: center;
+}
+h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+#texts p, #texts a {
+    font-size: 16px;
 }
 </style>
