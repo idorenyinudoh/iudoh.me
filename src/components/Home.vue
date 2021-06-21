@@ -40,6 +40,17 @@ section#works
         li Medium
             ul
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
+section#contact
+    h2 contact
+    p You can reach out to me through  
+        a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
+        |  or  
+        a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") LinkedIn
+        | . If you want a less formal setting, there's  
+        a(href="https://twitter.com/broods_", target="_blank") my twitter
+        |  too.
+footer
+    p &copy; Idorenyin Udoh. All Rights Reserved.
 </template>
 
 <script>
@@ -99,7 +110,7 @@ h1 {
 #lil-intro p {
     margin: calc(10px + 1vw);
 }
-#works {
+section {
     position: relative;
     border-top: 2px solid;
     border-bottom: 2px solid;
@@ -146,7 +157,7 @@ h3 {
     font-weight: 500;
 }
 #texts p, #texts a {
-    font-size: 16px;
+    font-size: 18px;
 }
 ul {
     margin: calc(20px + 1vw) calc(10px + 1vw);
@@ -161,5 +172,19 @@ ul ul {
 }
 ul ul li {
     margin: calc(5px + 1vw);
+}
+#contact {
+    margin-bottom: 0;
+}
+#contact h2 {
+    left: 5vw;
+    right: auto;
+}
+footer {
+    margin: calc(30px + 1vw);
+    text-align: center;
+}
+footer p {
+    font-size: 18px;
 }
 </style>
