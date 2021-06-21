@@ -23,6 +23,23 @@ section#works
             h3 frontend references
             p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
             a(href="#") Learn More
+#lil-intro
+    p I write articles too, remember?
+    p I plan on writing for 
+        a(href="#") my blog
+        |  and I also have my works on a couple websites:
+    ul
+        li CSS-Tricks
+            ul
+                li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/") Give Users Control: The Media Session API
+                li: a(href="https://css-tricks.com/animating-with-lottie/") Animating with Lottie
+                li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/") Let's Create a Custom Audio Player
+        li freeCodeCamp
+            ul
+                li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
+        li Medium
+            ul
+                li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
 </template>
 
 <script>
@@ -130,5 +147,19 @@ h3 {
 }
 #texts p, #texts a {
     font-size: 16px;
+}
+ul {
+    margin: calc(20px + 1vw) calc(10px + 1vw);
+    font-size: 24px;
+    padding: 0 0 0 25px;
+}
+ul > li {
+    margin-bottom: calc(10px + 1vw);
+}
+ul ul {
+    margin: calc(5px + 1vw);
+}
+ul ul li {
+    margin: calc(5px + 1vw);
 }
 </style>
