@@ -34,6 +34,7 @@ section#works
                 li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/") Give Users Control: The Media Session API
                 li: a(href="https://css-tricks.com/animating-with-lottie/") Animating with Lottie
                 li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/") Let's Create a Custom Audio Player
+                li: a(href="https://css-tricks.com/almanac/properties/c/content-visibility/") content-visibility
         li freeCodeCamp
             ul
                 li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
@@ -163,12 +164,14 @@ ul {
     margin: calc(20px + 1vw) calc(10px + 1vw);
     font-size: 24px;
     padding: 0 0 0 25px;
+    list-style-type: disc;
 }
 ul > li {
     margin-bottom: calc(10px + 1vw);
 }
 ul ul {
     margin: calc(5px + 1vw);
+    list-style-type: circle;
 }
 ul ul li {
     margin: calc(5px + 1vw);
