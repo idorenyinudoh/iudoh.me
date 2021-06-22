@@ -116,7 +116,7 @@ section {
     border-top: 2px solid;
     border-bottom: 2px solid;
     margin: calc(90px + 1vw) 0;
-    padding: calc(40px + 1vw) 30px;
+    padding: calc(40px + 1vw) calc(30px + 1vw);
 }
 h2 {
     position: absolute;
@@ -135,7 +135,7 @@ article {
     box-sizing: border-box;
 }
 article:not(:last-child) {
-    margin-bottom: calc(25px + 1vw);
+    margin-bottom: calc(40px + 1vw);
 }
 #image-container {
     position: relative;
