@@ -2,7 +2,7 @@
 header
     p Hey there,
     h1 Idorenyin Udoh, here
-    p I'm from Akwa Ibom, Nigeria. I'll be graduating with a BSc in Computer Science by next month. I work out. I often play Candy Crush and CoDM. I like to think I can rap. And most importantly, I write. Code — and technical articles.
+    p I'm from Akwa Ibom, Nigeria. I'll be graduating with a BSc in Computer Science by next month. I work out. I often play Candy Crush and CoDM. I like to think I can rap. And most importantly, I'm a frontend developer and technical writer.
 #lil-intro
     p I mostly write JavaScript but I'm also into HTML and CSS.
     p Ocassionally, I work with Node.js, Express, Pug, MongoDB, and nodemon.
@@ -24,7 +24,7 @@ section#works
             p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
             a(href="#") Learn More
 #lil-intro
-    p I write articles too, remember?
+    p I write technical articles too, remember?
     p I plan on writing for 
         a(href="#") my blog
         |  and I also have my works on a couple websites:
@@ -49,7 +49,7 @@ section#contact
         a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") LinkedIn
         | . If you want a less formal setting, there's  
         a(href="https://twitter.com/broods_", target="_blank") my twitter
-        |  too. Finally, 
+        | . Finally, 
         a(href="https://github.com/idorenyinudoh", target="_blank") here
         | 's my GitHub.
 footer
