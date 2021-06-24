@@ -2,7 +2,7 @@
 header
     p Hey there,
     h1 Idorenyin Udoh, here
-    p I'll be graduating with a BSc in Computer Science by next month, I work out, I often play Candy Crush and CoDM, I like to think I can rap, and most importantly, I write. Code — and technical articles.
+    p I'm from Akwa Ibom, Nigeria. I'll be graduating with a BSc in Computer Science by next month. I work out. I often play Candy Crush and CoDM. I like to think I can rap. And most importantly, I write. Code — and technical articles.
 #lil-intro
     p I mostly write JavaScript but I'm also into HTML and CSS.
     p Ocassionally, I work with Node.js, Express, Pug, MongoDB, and nodemon.
