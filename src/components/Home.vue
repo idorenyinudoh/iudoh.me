@@ -49,7 +49,9 @@ section#contact
         a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") LinkedIn
         | . If you want a less formal setting, there's  
         a(href="https://twitter.com/broods_", target="_blank") my twitter
-        |  too.
+        |  too. Finally, 
+        a(href="https://github.com/idorenyinudoh", target="_blank") here
+        | 's my GitHub.
 footer
     p &copy; Idorenyin Udoh. All Rights Reserved.
 </template>
