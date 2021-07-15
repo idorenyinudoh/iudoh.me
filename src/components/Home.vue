@@ -1,14 +1,15 @@
 <template lang="pug">
 header
-    p Hey there,
-    h1 Idorenyin Udoh, here
-    p I'm from Akwa Ibom, Nigeria. I'll be graduating with a BSc in Computer Science by next month. I work out. I often play Candy Crush and CoDM. I like to think I can rap. And most importantly, I'm a frontend developer and technical writer.
-#lil-intro
-    p I mostly write JavaScript but I'm also into HTML and CSS.
-    p Ocassionally, I work with Node.js, Express, Pug, MongoDB, and nodemon.
-    p And — I use Git all the time.
+    h1 Idorenyin Udoh
+    p frontend developer &amp; technical writer
+section#about.left-heading
+    h2 about me
+    p I'm a Frontend developer and Technical writer from Akwa Ibom, Nigeria. I have a BSc in Computer Science from Babcock University.
+    p I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm currently getting better at Vue, I always work with Git, and my preferred template engine is Pug.
+    p I often write articles when I learn new technologies as I want to give back to the community 
+        small and make a few bucks.
 section#works
-    h2 stuff i've worked on
+    h2 my works
     article
         #image-container
             img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png")
@@ -23,25 +24,20 @@ section#works
             h3 frontend references
             p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
             a(href="#") Learn More
-#lil-intro
-    p I write technical articles too, remember?
-    p I plan on writing for 
-        a(href="#") my blog
-        |  and I also have my works on a couple websites:
+    hr
+    p Some of my technical articles:
     ul
         li CSS-Tricks
             ul
                 li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/") Give Users Control: The Media Session API
-                li: a(href="https://css-tricks.com/animating-with-lottie/") Animating with Lottie
                 li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/") Let's Create a Custom Audio Player
-                li: a(href="https://css-tricks.com/almanac/properties/c/content-visibility/") content-visibility
         li freeCodeCamp
             ul
                 li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
         li Medium
             ul
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
-section#contact
+section#contact.left-heading
     h2 contact
     p You can reach out to me through  
         a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
@@ -66,6 +62,7 @@ export default {
 @media screen and (min-width: 800px) {
     article {
         grid-template-columns: 500px 1fr;
+        max-width: 1000px;
     }
 }
 @media screen and (min-width: 660px) and (max-width: 799px) {
@@ -105,7 +102,7 @@ header {
     padding: calc(20px + 1vw);
     display: grid;
     align-content: center;
-    row-gap: calc(30px + 1vw);
+    row-gap: 10px;
 }
 p {
     margin: 0;
@@ -113,16 +110,20 @@ p {
 }
 h1 {
     margin: 0;
+    width: 90%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
     font-weight: 500;
     font-size: 48px;
 }
-#lil-intro {
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    padding: calc(20px + 1vw);
+#about {
+    margin-top: 13px;
 }
-#lil-intro p {
-    margin: calc(10px + 1vw);
+#about p:not(:last-child) {
+    margin-bottom: calc(10px + 1vw);
+}
+small {
+    font-size: 16px;
 }
 section {
     position: relative;
@@ -141,14 +142,25 @@ h2 {
     font-size: 32px;
     background: white;
 }
+#works {
+    padding: calc(50px + 1vw) calc(30px + 1vw);
+}
 article {
     display: grid;
     border: 2px solid;
     width: 100%;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 article:not(:last-child) {
     margin-bottom: calc(40px + 1vw);
+}
+hr {
+    margin: calc(70px + 1vw) auto;
+    border: none;
+    background-color: #000;
+    height: 2px;
+    width: 80%;
 }
 #image-container {
     position: relative;
@@ -192,10 +204,10 @@ ul ul {
 ul ul li {
     margin: calc(5px + 1vw);
 }
-#contact {
+.left-heading {
     margin-bottom: 0;
 }
-#contact h2 {
+.left-heading h2 {
     left: 5vw;
     right: auto;
 }
