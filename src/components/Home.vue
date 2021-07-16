@@ -12,14 +12,14 @@ section#works
     h2 my works
     article
         #image-container
-            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png")
+            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png", alt="undiluted music landing page screenshot")
         #texts
             h3 undiluted music
             p a website that gives users access to stream and download songs.
             a(href="#") Learn More
     article
         #image-container
-            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204937/portfolio/frontend-references-landing-page-screenshot.png")
+            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204937/portfolio/frontend-references-landing-page-screenshot.png", alt="frontend references landing page screenshot")
         #texts
             h3 frontend references
             p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
