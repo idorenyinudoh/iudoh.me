@@ -39,15 +39,23 @@ section#works
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
 section#contact.left-heading
     h2 contact
-    p You can reach out to me through  
-        a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
-        |  or  
-        a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") LinkedIn
-        | . If you want a less formal setting, there's  
-        a(href="https://twitter.com/broods_", target="_blank") my twitter
-        | . Finally, 
-        a(href="https://github.com/idorenyinudoh", target="_blank") here
-        | 's my GitHub.
+    label(for="name") Name:
+    input(type="text", name="name", id="name", required)
+    label(for="email") Email:
+    input(type="email", name="email", id="email", required)
+    label(for="subject") Subject:
+    input(type="text", name="subject", id="subject", required)
+    label(for="message") Message: 
+    textarea(maxlength="500", rows="10", name="message", id="message", required)
+    //- p You can reach out to me through  
+    //-     a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
+    //-     |  or  
+    //-     a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") LinkedIn
+    //-     | . If you want a less formal setting, there's  
+    //-     a(href="https://twitter.com/broods_", target="_blank") my twitter
+    //-     | . Finally, 
+    //-     a(href="https://github.com/idorenyinudoh", target="_blank") here
+    //-     | 's my GitHub.
 footer
     p &copy; Idorenyin Udoh. All Rights Reserved.
 </template>
@@ -210,6 +218,32 @@ ul ul li {
 .left-heading h2 {
     left: 5vw;
     right: auto;
+}
+label {
+    display: block;
+    width: max-content;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+input {
+    margin-bottom: 25px;
+}
+input, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #808080;
+    padding: 5px 2px;
+    font-size: 20px;
+    letter-spacing: inherit;
+    outline: none;
+}
+textarea {
+    display: block;
+    font-family: inherit;
+}
+input:focus, textarea:focus {
+    border-color: #000;
 }
 footer {
     margin: calc(30px + 1vw);
