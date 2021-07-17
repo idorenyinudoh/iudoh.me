@@ -46,7 +46,9 @@ section#contact.left-heading
     label(for="subject") Subject:
     input(type="text", name="subject", id="subject", required)
     label(for="message") Message: 
-    textarea(maxlength="500", rows="10", name="message", id="message", required)
+    textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
+    span#number-of-characters-left(v-if="charactersLeft === 1") {{ charactersLeft }} character left
+    span#number-of-characters-left(v-else) {{ charactersLeft }} characters left
     //- p You can reach out to me through  
     //-     a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
     //-     |  or  
@@ -62,7 +64,17 @@ footer
 
 <script>
 export default {
-    name: 'Home'
+    name: 'Home',
+    data() {
+        return {
+            charactersLeft: 500
+        }
+    },
+    methods: {
+        getCharactersLeft() {
+            this.charactersLeft = 500 - this.message.length;
+        }
+    }
 }
 </script>
 
@@ -244,6 +256,11 @@ textarea {
 }
 input:focus, textarea:focus {
     border-color: #000;
+}
+#number-of-characters-left {
+    display: block;
+    margin: 5px 0;
+    font-size: 18px;
 }
 footer {
     margin: calc(30px + 1vw);
