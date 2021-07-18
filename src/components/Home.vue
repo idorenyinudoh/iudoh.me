@@ -49,6 +49,7 @@ section#contact.left-heading
     textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
     span#number-of-characters-left(v-if="charactersLeft === 1") {{ charactersLeft }} character left
     span#number-of-characters-left(v-else) {{ charactersLeft }} characters left
+    button(type="submit") Submit
     //- p You can reach out to me through  
     //-     a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
     //-     |  or  
@@ -261,6 +262,16 @@ input:focus, textarea:focus {
     display: block;
     margin: 5px 0;
     font-size: 18px;
+}
+button {
+    margin: 20px 0;
+    border: 2px solid #000;
+    padding: 8px 8px 8px 6px;
+    background: inherit;
+    font-family: inherit;
+    font-size: 20px;
+    letter-spacing: inherit;
+    cursor: pointer;
 }
 footer {
     margin: calc(30px + 1vw);
