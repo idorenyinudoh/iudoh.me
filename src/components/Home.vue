@@ -39,26 +39,26 @@ section#works
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
 section#contact.left-heading
     h2 contact
-    label(for="name") Name:
-    input(type="text", name="name", id="name", required)
-    label(for="email") Email:
-    input(type="email", name="email", id="email", required)
-    label(for="subject") Subject:
-    input(type="text", name="subject", id="subject", required)
-    label(for="message") Message: 
-    textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
-    span#number-of-characters-left(v-if="charactersLeft === 1") {{ charactersLeft }} character left
-    span#number-of-characters-left(v-else) {{ charactersLeft }} characters left
-    button(type="submit") Submit
-    //- p You can reach out to me through  
-    //-     a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
-    //-     |  or  
-    //-     a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") LinkedIn
-    //-     | . If you want a less formal setting, there's  
-    //-     a(href="https://twitter.com/broods_", target="_blank") my twitter
-    //-     | . Finally, 
-    //-     a(href="https://github.com/idorenyinudoh", target="_blank") here
-    //-     | 's my GitHub.
+    form
+        p If you want to say hi, or hire me:
+        label(for="name") Name:
+        input(type="text", name="name", id="name", required)
+        label(for="email") Email:
+        input(type="email", name="email", id="email", required)
+        label(for="subject") Subject:
+        input(type="text", name="subject", id="subject", required)
+        label(for="message") Message: 
+        textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
+        span#number-of-characters-left(v-if="charactersLeft === 1") {{ charactersLeft }} character left
+        span#number-of-characters-left(v-else) {{ charactersLeft }} characters left
+        button(type="submit") Submit
+    #socials
+        p Alternatively, you could send me an  
+            a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
+            |  or find me on  
+            a(href="https://linkedin.com/in/idorenyinudoh") LinkedIn
+            |  or  
+            a(href="https://github.com/idorenyinudoh") GitHub
 footer
     p &copy; Idorenyin Udoh. All Rights Reserved.
 </template>
@@ -97,6 +97,11 @@ export default {
     }
     #texts {
         padding: 20px;
+    }
+    #contact {
+        display: grid;
+        column-gap: calc(20px + 1vw);
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media screen and (max-width: 659px) {
@@ -264,7 +269,7 @@ input:focus, textarea:focus {
     font-size: 18px;
 }
 button {
-    margin: 20px 0;
+    margin: 20px 0 50px 0;
     border: 2px solid #000;
     padding: 8px 8px 8px 6px;
     background: inherit;
@@ -273,8 +278,11 @@ button {
     letter-spacing: inherit;
     cursor: pointer;
 }
+#contact p {
+    margin-bottom: calc(30px + 1vw);
+}
 footer {
-    margin: calc(30px + 1vw);
+    margin: calc(15px + 1vw);
     text-align: center;
 }
 footer p {
