@@ -68,7 +68,8 @@ export default {
     name: 'Home',
     data() {
         return {
-            charactersLeft: 500
+            charactersLeft: 500,
+            message: ''
         }
     },
     methods: {
