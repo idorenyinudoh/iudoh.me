@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import UndilutedMusic from '../views/UndilutedMusic.vue'
 
 const routes = [
   {
@@ -7,6 +8,11 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/undiluted-music',
+    name: 'Undiluted Music',
+    component: UndilutedMusic
+  }
 //   {
     // path: '/about',
     // name: 'About',
