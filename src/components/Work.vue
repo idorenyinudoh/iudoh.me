@@ -6,9 +6,16 @@ header
         #image-container
             img(:src="screenshot1src",:alt="alt1")
 main
-    section
+    section.left-heading
         h2 project purpose
         p(v-for="purpose in purposes" v-html="purpose")
+    section
+        h2 tech stack
+        #container    
+            #image-container
+                img(:src="screenshot2src",:alt="alt2")
+        div
+            p(v-for="stack in stacks" v-html="stack")
 </template>
 
 <script>
@@ -19,20 +26,36 @@ export default {
         summary: String,
         screenshot1src: String,
         alt1: String,
-        purposes: Array
+        purposes: Array,
+        screenshot2src: String,
+        alt2: String,
+        stacks: Array
     }
 }
 </script>
 
 <style scoped>
 @media screen and (max-width: 664px) {
-    #container {
+    header #container {
         margin: calc(25px + 1vw) auto;
+    }
+    section #container {
+        margin: calc(5px + 1vw) auto;
     }
 }
 @media screen and (min-width: 665px) {
-    #container {
+    header #container {
         margin: calc(35px + 1vw) auto;
+    }
+}
+@media screen and (min-width: 665px) and (max-width: 768px) {
+    section #container {
+        margin: calc(15px + 1vw) auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    section:not(:first-child) p:first-child {
+        margin: calc(30px + 1vw) 0 calc(10px + 1vw) 0;
     }
 }
 @media screen and (min-width: 769px) {
@@ -47,8 +70,14 @@ export default {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
     }
-    #container {
+    header #container {
         grid-row: 1 / 3;
+    }
+    section:not(:first-child) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: calc(20px + 1vw);
+        place-items: center;
     }
 }
 header {
@@ -70,6 +99,7 @@ p {
 main {
     margin-top: calc(30px + 1vw);
     display: grid;
+    row-gap: calc(90px + 1vw);
 }
 #container {
     width: 100%;
@@ -103,6 +133,10 @@ h2 {
     font-weight: 500;
     font-size: 32px;
     background: white;
+}
+.left-heading h2 {
+    left: 5vw;
+    right: auto;
 }
 section p {
     margin: 0;
