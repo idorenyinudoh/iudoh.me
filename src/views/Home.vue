@@ -11,16 +11,16 @@ section#about.left-heading
 section#works
     h2 my works
     article
-        #image-container
+        .image-container
             img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png", alt="undiluted music landing page screenshot")
-        #texts
+        .texts
             h3 undiluted music
             p a website that gives users access to stream and download songs.
             router-link(to="/undiluted-music") Learn More
     article
-        #image-container
+        .image-container
             img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204937/portfolio/frontend-references-landing-page-screenshot.png", alt="frontend references landing page screenshot")
-        #texts
+        .texts
             h3 frontend references
             p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
             router-link(to="/frontend-references") Learn More
@@ -93,10 +93,10 @@ export default {
     }
 }
 @media screen and (min-width: 660px) {
-    #image-container {
+    .image-container {
         border-right: 1px solid;
     }
-    #texts {
+    .texts {
         padding: 20px;
     }
     #contact {
@@ -106,10 +106,10 @@ export default {
     }
 }
 @media screen and (max-width: 659px) {
-    #image-container {
+    .image-container {
         border-bottom: 1px solid;
     }
-    #texts {
+    .texts {
         padding: 20px 10px;
     }
 }
@@ -189,7 +189,7 @@ hr {
     height: 2px;
     width: 80%;
 }
-#image-container {
+.image-container {
     position: relative;
     padding-top: 75%;
 }
@@ -199,12 +199,12 @@ img {
     top: 0;
     left: 0;
 }
-#texts {
+.texts {
     display: grid;
     row-gap: 10px;
     align-content: center;
 }
-#texts a {
+.texts a {
     width: max-content;
 }
 h3 {
@@ -212,7 +212,7 @@ h3 {
     font-size: 24px;
     font-weight: 500;
 }
-#texts p, #texts a {
+.texts p, .texts a {
     font-size: 18px;
 }
 ul {

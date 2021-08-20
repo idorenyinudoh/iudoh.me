@@ -2,8 +2,8 @@
 header
     h1 {{ name }}
     p {{ summary }}
-    #container    
-        #image-container
+    .container    
+        .image-container
             img(:src="screenshot1src",:alt="alt1")
 main
     section.left-heading
@@ -11,8 +11,8 @@ main
         p(v-for="purpose in purposes" v-html="purpose")
     section
         h2 tech stack
-        #container    
-            #image-container
+        .container    
+            .image-container
                 img(:src="screenshot2src",:alt="alt2")
         div
             p(v-for="stack in stacks" v-html="stack")
@@ -20,13 +20,13 @@ main
         h2 challenges
         div
             p(v-for="challenge in challenges" v-html="challenge")
-        #container    
-            #image-container
+        .container    
+            .image-container
                 img(:src="screenshot3src",:alt="alt3")
     section
         h2 lessons
-        #container    
-            #image-container
+        .container    
+            .image-container
                 img(:src="screenshot4src",:alt="alt4")
         div
             p(v-for="lesson in lessons" v-html="lesson")
@@ -56,26 +56,29 @@ export default {
 
 <style scoped>
 @media screen and (max-width: 664px) {
-    header #container {
+    header .container {
         margin: calc(25px + 1vw) auto;
     }
-    section #container {
+    section .container {
         margin: calc(5px + 1vw) auto;
     }
 }
 @media screen and (min-width: 665px) {
-    header #container {
+    header .container {
         margin: calc(35px + 1vw) auto;
     }
 }
 @media screen and (min-width: 665px) and (max-width: 768px) {
-    section #container {
+    section .container {
         margin: calc(15px + 1vw) auto;
     }
 }
 @media screen and (max-width: 768px) {
-    section:not(:first-child) p:first-child {
+    section:not(:first-child):not(:nth-child(3)) p:first-child {
         margin: calc(30px + 1vw) 0 calc(10px + 1vw) 0;
+    }
+    section:nth-child(3) p:last-child {
+        margin-bottom: calc(30px + 1vw);
     }
 }
 @media screen and (min-width: 769px) {
@@ -90,7 +93,7 @@ export default {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
     }
-    header #container {
+    header .container {
         grid-row: 1 / 3;
     }
     section:not(:first-child) {
@@ -121,13 +124,13 @@ main {
     display: grid;
     row-gap: calc(90px + 1vw);
 }
-#container {
+.container {
     width: 100%;
     max-width: 500px;
     box-sizing: border-box;
     border: 2px solid #000;
 }
-#image-container {
+.image-container {
     position: relative;
     padding-top: 75%;
 }
