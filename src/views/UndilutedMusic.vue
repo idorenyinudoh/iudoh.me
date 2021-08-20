@@ -24,7 +24,15 @@ const props = {
     stacks: [
         'I started out the development with HTML, CSS, and Vanilla JavaScript.',
         'When I needed to start working with a database, I started working with Node, express, mongodb, and Pug (I replaced all the HTML files with their Pug equivalents).'
-    ]
+    ],
+    challenges: [
+        'Being that this was my first-ever project, the only challenge I had was... everything. From implementing what I had in my wireframes to making a button look the way I pictured it in my head &#8212; everything seemed to be difficult.',
+        'Eventually, with the help of documentation and technical articles, I started to actually make progess.',
+        'However, the major challenge I had was building a cross-browser compatible audio player. I wanted my audio player to have the same look and functionality across browsers. Therefore, using the default audio player wasn\'t an option.',
+        'I solved this challenge by creating an audio player from scratch in a different repository. I used the HTMLAudioElement API for the entire functionality of the player and a Lottie animated icon from Icons8 for the play / pause transition.'
+    ],
+    screenshot3src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-mi-abaga-page-screenshot_ftpzcx.png',
+    alt3: 'undiluted music mi abaga page screenshot'
 }
 
 export default {

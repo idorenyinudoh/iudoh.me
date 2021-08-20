@@ -16,6 +16,13 @@ main
                 img(:src="screenshot2src",:alt="alt2")
         div
             p(v-for="stack in stacks" v-html="stack")
+    section.left-heading
+        h2 challenges
+        div
+            p(v-for="challenge in challenges" v-html="challenge")
+        #container    
+            #image-container
+                img(:src="screenshot3src",:alt="alt3")
 </template>
 
 <script>
@@ -29,7 +36,10 @@ export default {
         purposes: Array,
         screenshot2src: String,
         alt2: String,
-        stacks: Array
+        stacks: Array,
+        challenges: Array,
+        screenshot3src: String,
+        alt3: String
     }
 }
 </script>
