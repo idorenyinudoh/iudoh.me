@@ -32,7 +32,14 @@ const props = {
         'I solved this challenge by creating an audio player from scratch in a different repository. I used the HTMLAudioElement API for the entire functionality of the player and a Lottie animated icon from Icons8 for the play / pause transition.'
     ],
     screenshot3src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-mi-abaga-page-screenshot_ftpzcx.png',
-    alt3: 'undiluted music mi abaga page screenshot'
+    alt3: 'undiluted music mi abaga page screenshot',
+    screenshot4src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-rendezvous-page-screenshot_cujlp6.png',
+    alt4: 'undiluted music rendezvous page screenshot',
+    lessons: [
+        'Among the numerous things I learned while developing undiluted music, there were two major ones.',
+        'I learnt how to utilize the HTMLAudioElement API to build a music player. Play, pause, seek, volume control &#8212; I learnt all that while developing this project. Shortly after, I wrote an article on how to go about it.',
+        'I also figured out how to implement the Media Session API. The API provides an interface that gives users access to control media playback outside the browser tab where the media is playing. On mobile, this will be in the notification area while on desktop, it can be found on media hubs. I wrote on it here.'
+    ]
 }
 
 export default {

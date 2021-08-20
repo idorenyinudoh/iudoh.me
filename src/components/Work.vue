@@ -23,6 +23,13 @@ main
         #container    
             #image-container
                 img(:src="screenshot3src",:alt="alt3")
+    section
+        h2 lessons
+        #container    
+            #image-container
+                img(:src="screenshot4src",:alt="alt4")
+        div
+            p(v-for="lesson in lessons" v-html="lesson")
 </template>
 
 <script>
@@ -39,7 +46,10 @@ export default {
         stacks: Array,
         challenges: Array,
         screenshot3src: String,
-        alt3: String
+        alt3: String,
+        screenshot4src: String,
+        alt4: String,
+        lessons: Array
     }
 }
 </script>
