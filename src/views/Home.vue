@@ -59,11 +59,12 @@ section#contact.left-heading
             a(href="https://linkedin.com/in/idorenyinudoh") LinkedIn
             |  or  
             a(href="https://github.com/idorenyinudoh") GitHub
-footer
-    p &copy; Idorenyin Udoh. All Rights Reserved.
+Footer
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
+
 export default {
     name: 'Home',
     data() {
@@ -76,6 +77,9 @@ export default {
         getCharactersLeft() {
             this.charactersLeft = 500 - this.message.length;
         }
+    },
+    components: {
+        Footer
     }
 }
 </script>
@@ -281,12 +285,5 @@ button {
 }
 #contact p {
     margin-bottom: calc(30px + 1vw);
-}
-footer {
-    margin: calc(15px + 1vw);
-    text-align: center;
-}
-footer p {
-    font-size: 18px;
 }
 </style>
