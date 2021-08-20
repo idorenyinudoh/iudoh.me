@@ -30,6 +30,10 @@ main
                 img(:src="screenshot4src",:alt="alt4")
         div
             p(v-for="lesson in lessons" v-html="lesson")
+    section.left-heading
+        h2 check it out
+        p: a(:href="repo", target="_blank") codebase repository
+        p: a(:href="url", target="_blank") live
 </template>
 
 <script>
@@ -49,7 +53,9 @@ export default {
         alt3: String,
         screenshot4src: String,
         alt4: String,
-        lessons: Array
+        lessons: Array,
+        repo: String,
+        url: String
     }
 }
 </script>
@@ -101,6 +107,13 @@ export default {
         grid-template-columns: 1fr 1fr;
         column-gap: calc(20px + 1vw);
         place-items: center;
+    }
+    section:last-child {
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+    }
+    section:last-child p:not(:first-child){
+        margin-bottom: 0;
     }
 }
 header {

@@ -39,7 +39,9 @@ const props = {
         'Among the numerous things I learned while developing undiluted music, there were two major ones.',
         'I learnt how to utilize the HTMLAudioElement API to build a music player. Play, pause, seek, volume control &#8212; I learnt all that while developing this project. Shortly after, I wrote an <a href="https://css-tricks.com/lets-create-a-custom-audio-player/" target="_blank">article</a> on how to go about it.',
         'I also figured out how to implement the Media Session API. The API provides an interface that gives users access to control media playback outside the browser tab where the media is playing. On mobile, this will be in the notification area while on desktop, it can be found on media hubs. I wrote on it <a href="https://css-tricks.com/give-users-control-the-media-session-api/" target="_blank">here</a>.'
-    ]
+    ],
+    repo: 'https://github.com/idorenyinudoh/undiluted-music2',
+    url: 'https://idorenyinudoh.github.io/undiluted-music2/'
 }
 
 export default {
