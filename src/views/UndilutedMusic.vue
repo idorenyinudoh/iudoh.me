@@ -1,5 +1,5 @@
-<template>
-  <Work :="props"></Work>
+<template lang="pug">
+Work(:="props")
 </template>
 
 <script>
