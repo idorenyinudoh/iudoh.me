@@ -40,10 +40,8 @@ section#contact.left-heading
             input(type="email", name="email", id="email", required)
         label Subject:
             input(type="text", name="subject", id="subject", required)
-        label Message: 
+        label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
             textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
-        span#number-of-characters-left(v-if="charactersLeft === 1") {{ charactersLeft }} character left
-        span#number-of-characters-left(v-else) {{ charactersLeft }} characters left
         button(type="submit") Submit
     #socials
         p Alternatively, you could send me an  
@@ -99,7 +97,7 @@ export default {
     form {
         grid-template-columns: 1fr 1fr;
     }
-    label:nth-child(4) {
+    label:nth-child(4), button {
         grid-column: 1 / 2;
     }
 }
@@ -250,6 +248,18 @@ label {
 }
 textarea {
     font-family: inherit;
+}
+label:nth-child(4) {
+    position: relative;
+    margin-bottom: calc(30px + 1vw);
+}
+label:nth-child(4)::after {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    font-size: 18px;
+    content: attr(data-characters-left);
+
 }
 input, textarea {
     border: 2px solid #808080;
