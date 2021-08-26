@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import UndilutedMusic from '../views/UndilutedMusic.vue'
-import FrontendReferences from '../views/FrontendReferences.vue'
 
 const routes = [
   {
@@ -13,11 +12,6 @@ const routes = [
     path: '/undiluted-music',
     name: 'Undiluted Music',
     component: UndilutedMusic
-  },
-  {
-    path: '/frontend-references',
-    name: 'Frontend References',
-    component: FrontendReferences
   }
 //   {
     // path: '/about',

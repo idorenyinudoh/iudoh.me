@@ -17,13 +17,6 @@ section#works
             h3 undiluted music
             p a website that gives users access to stream and download songs.
             router-link(to="/undiluted-music") Learn More
-    article
-        .image-container
-            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204937/portfolio/frontend-references-landing-page-screenshot.png", alt="frontend references landing page screenshot")
-        .texts
-            h3 frontend references
-            p a web application for developers to find out the meaning of any HTML, CSS, JavaScript, SVG, MathML, or API's keyword.
-            router-link(to="/frontend-references") Learn More
     hr
     p Some of my technical articles:
     ul
