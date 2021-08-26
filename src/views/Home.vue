@@ -32,16 +32,16 @@ section#works
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
 section#contact.left-heading
     h2 contact
+    p If you want to say hi, or hire me:
     form
-        p If you want to say hi, or hire me:
-        label(for="name") Name:
-        input(type="text", name="name", id="name", required)
-        label(for="email") Email:
-        input(type="email", name="email", id="email", required)
-        label(for="subject") Subject:
-        input(type="text", name="subject", id="subject", required)
-        label(for="message") Message: 
-        textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
+        label Name:
+            input(type="text", name="name", id="name", required)
+        label Email:
+            input(type="email", name="email", id="email", required)
+        label Subject:
+            input(type="text", name="subject", id="subject", required)
+        label Message: 
+            textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
         span#number-of-characters-left(v-if="charactersLeft === 1") {{ charactersLeft }} character left
         span#number-of-characters-left(v-else) {{ charactersLeft }} characters left
         button(type="submit") Submit
@@ -96,10 +96,11 @@ export default {
     .texts {
         padding: 20px;
     }
-    #contact {
-        display: grid;
-        column-gap: calc(20px + 1vw);
+    form {
         grid-template-columns: 1fr 1fr;
+    }
+    label:nth-child(4) {
+        grid-column: 1 / 2;
     }
 }
 @media screen and (max-width: 659px) {
@@ -235,28 +236,27 @@ ul ul li {
     left: 5vw;
     right: auto;
 }
+#contact p {
+    margin-bottom: calc(30px + 1vw);
+}
+form {
+    display: grid;
+    gap: calc(20px + 1vw);
+}
 label {
-    display: block;
-    width: max-content;
-    margin-bottom: 5px;
+    display: grid;
+    row-gap: calc(2px + 0.5vw);
     font-size: 24px;
 }
-input {
-    margin-bottom: 25px;
+textarea {
+    font-family: inherit;
 }
 input, textarea {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 400px;
     border: 2px solid #808080;
     padding: 5px 2px;
     font-size: 20px;
     letter-spacing: inherit;
     outline: none;
-}
-textarea {
-    display: block;
-    font-family: inherit;
 }
 input:focus, textarea:focus {
     border-color: #000;
@@ -275,8 +275,5 @@ button {
     font-size: 20px;
     letter-spacing: inherit;
     cursor: pointer;
-}
-#contact p {
-    margin-bottom: calc(30px + 1vw);
 }
 </style>
