@@ -35,13 +35,13 @@ section#contact.left-heading
     p If you want to say hi, or hire me:
     form
         label Name:
-            input(type="text", name="name", id="name", required)
+            input(type="text", name="name", id="name", placeholder="Tobias Lütke", required)
         label Email:
-            input(type="email", name="email", id="email", required)
+            input(type="email", name="email", id="email", placeholder="tobiaslütke@shopify.com", required)
         label Subject:
-            input(type="text", name="subject", id="subject", required)
+            input(type="text", name="subject", id="subject", placeholder="Employment Request", required)
         label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
-            textarea(maxlength="500", rows="10", name="message", id="message", required, v-model="message", @input="getCharactersLeft")
+            textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
         button(type="submit") Submit
     #socials
         p Alternatively, you could send me an  
@@ -263,7 +263,7 @@ label:nth-child(4)::after {
 }
 input, textarea {
     border: 2px solid #808080;
-    padding: 5px 2px;
+    padding: 10px 5px;
     font-size: 20px;
     letter-spacing: inherit;
     outline: none;
