@@ -44,12 +44,9 @@ section#contact.left-heading
             textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
         button(type="submit") Submit
     #socials
-        p Alternatively, you could send me an  
-            a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
-            |  or find me on  
-            a(href="https://linkedin.com/in/idorenyinudoh") LinkedIn
-            |  or  
-            a(href="https://github.com/idorenyinudoh") GitHub
+        p: a(href="mailto:idorenyinudoh10@outlook.com", target="_blank") email
+        p: a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") linkedIn
+        p: a(href="https://github.com/idorenyinudoh", target="_blank") github
 Footer
 </template>
 
@@ -234,7 +231,7 @@ ul ul li {
     left: 5vw;
     right: auto;
 }
-#contact p {
+#contact > p {
     margin-bottom: calc(30px + 1vw);
 }
 form {
@@ -245,9 +242,6 @@ label {
     display: grid;
     row-gap: calc(2px + 0.5vw);
     font-size: 24px;
-}
-textarea {
-    font-family: inherit;
 }
 label:nth-child(4) {
     position: relative;
@@ -268,6 +262,9 @@ input, textarea {
     letter-spacing: inherit;
     outline: none;
 }
+textarea {
+    font-family: inherit;
+}
 input:focus, textarea:focus {
     border-color: #000;
 }
@@ -284,5 +281,11 @@ button {
 button:hover, button:focus {
     outline: none;
     border-color: #000;
+}
+#socials {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: calc(20px + 1vw);
+    justify-content: center;
 }
 </style>
