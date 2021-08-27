@@ -271,11 +271,6 @@ input, textarea {
 input:focus, textarea:focus {
     border-color: #000;
 }
-#number-of-characters-left {
-    display: block;
-    margin: 5px 0;
-    font-size: 18px;
-}
 button {
     margin: 20px 0 50px 0;
     border: 2px solid #000;
