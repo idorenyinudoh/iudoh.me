@@ -1,4 +1,6 @@
 <template lang="pug">
+nav
+    p: router-link(to="/") Idorenyin Udoh
 header
     h1 {{ name }}
     p {{ summary }}
@@ -62,6 +64,43 @@ export default {
     },
     components: {
         Footer
+    },
+    data() {
+        return {
+            initialScrollY: 0
+        }
+    },
+    beforeMount() {
+        window.addEventListener('scroll', this.toggleNavVisibility)
+    },
+    mounted() {
+        this.initialScrollY = window.scrollY;
+    },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.toggleNavVisibility)
+    },
+    methods: {
+        toggleNavVisibility() {
+            const nav = document.querySelector('nav');
+
+            if(window.scrollY > this.initialScrollY) {
+                this.initialScrollY = window.scrollY
+                if(nav.classList.contains('hide-nav')) {
+                    return;
+                } else if(nav.classList.contains('show-nav')) {
+                    nav.classList.replace('show-nav', 'hide-nav')
+                } else {
+                    nav.classList.add('hide-nav')
+                }
+            } else {
+                this.initialScrollY = window.scrollY
+                if(nav.classList.contains('show-nav')) {
+                    return;
+                } else if(nav.classList.contains('hide-nav')) {
+                    nav.classList.replace('hide-nav', 'show-nav')
+                }
+            }
+        }
     }
 }
 </script>
@@ -86,6 +125,9 @@ export default {
     }
 }
 @media screen and (max-width: 768px) {
+    header {
+        margin: 120px calc(20px + 1vw) 20px calc(20px + 1vw);
+    }
     section:not(:first-child):not(:nth-child(3)) p:first-child {
         margin: calc(30px + 1vw) 0 calc(10px + 1vw) 0;
     }
@@ -95,6 +137,7 @@ export default {
 }
 @media screen and (min-width: 769px) {
     header {
+        margin: 80px calc(20px + 1vw) 20px calc(20px + 1vw);
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
     }
@@ -123,8 +166,36 @@ export default {
     }
 }
 header {
-    margin: 20px calc(20px + 1vw);
     display: grid;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000;
+    padding: 20px calc(30px + 1vw);
+    box-shadow: 1px 1px 5px 0px #000;
+    z-index: 2;
+    background: #ffa826;
+    transition: transform 500ms ease-in-out;
+}
+nav p {
+    font-size: 32px;
+}
+nav a, nav a:visited {
+    color: #000;
+}
+nav a:hover {
+    text-decoration: none;
+}
+.hide-nav {
+    transform: translateY(-90px);
+}
+.show-nav {
+    transform: translateY(0px);
 }
 h1 {
     margin: 0 0 20px 0;
