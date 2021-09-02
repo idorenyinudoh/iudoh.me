@@ -31,15 +31,15 @@ export default {
         },
         submitForm() {
             emailjs.send(
-                process.env.VUE_APP_SERVICE_ID,
-                process.env.VUE_APP_TEMPLATE_ID,
+                'service_a23ks2u',
+                'template_hflruyo',
                 {
                     name: this.name,
                     email: this.email,
                     subject: this.subject,
                     message: this.message
                 },
-                process.env.VUE_APP_USER_ID
+                'user_KKGeOCryoJdt5V45QFpqk'
             )
             .then(res => {
                 console.log('Success!', res.status, res.text)
