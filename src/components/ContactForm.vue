@@ -1,28 +1,51 @@
 <template lang="pug">
-form
+form(@submit.prevent="submitForm")
     label Name:
-        input(type="text", name="name", id="name", placeholder="Tobias Lütke", required)
+        input(type="text", name="name", id="name", placeholder="Tobias Lütke", v-model="name", required)
     label Email:
-        input(type="email", name="email", id="email", placeholder="tobiaslütke@shopify.com", required)
+        input(type="email", name="email", id="email", placeholder="tobiaslütke@shopify.com", v-model="email", required)
     label Subject:
-        input(type="text", name="subject", id="subject", placeholder="Employment Request", required)
+        input(type="text", name="subject", id="subject", placeholder="Employment Request", v-model="subject", required)
     label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
         textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
     button(type="submit") Submit
 </template>
 
 <script>
+import emailjs from 'emailjs-com'
+
 export default {
     name: 'contact-form',
     data() {
         return {
             charactersLeft: 500,
+            name: '',
+            email: '',
+            subject: '',
             message: ''
         }
     },
     methods: {
         getCharactersLeft() {
             this.charactersLeft = 500 - this.message.length;
+        },
+        submitForm() {
+            emailjs.send(
+                process.env.VUE_APP_SERVICE_ID,
+                process.env.VUE_APP_TEMPLATE_ID,
+                {
+                    name: this.name,
+                    email: this.email,
+                    subject: this.subject,
+                    message: this.message
+                },
+                process.env.VUE_APP_USER_ID
+            )
+            .then(res => {
+                console.log('Success!', res.status, res.text)
+            }, err => {
+                console.log('Failed', err)
+            })
         }
     }
 }
