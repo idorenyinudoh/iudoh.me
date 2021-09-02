@@ -22,14 +22,14 @@ section#works
     ul
         li CSS-Tricks
             ul
-                li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/") Give Users Control: The Media Session API
-                li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/") Let's Create a Custom Audio Player
+                li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/" target="_blank") Give Users Control: The Media Session API
+                li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/" target="_blank") Let's Create a Custom Audio Player
         li freeCodeCamp
             ul
-                li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
+                li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/" target="_blank") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
         li Medium
             ul
-                li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339") How to Use Lottie Animations on the Web
+                li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
 section#contact.left-heading
     h2 contact
     p If you want to say hi, or hire me:
