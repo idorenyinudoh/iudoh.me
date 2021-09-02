@@ -25,11 +25,12 @@ export default {
             message: ''
         }
     },
+    emits: ['show-thank-you'],
     methods: {
         getCharactersLeft() {
             this.charactersLeft = 500 - this.message.length;
         },
-        submitForm() {
+        submitForm(e) {
             emailjs.send(
                 'service_a23ks2u',
                 'template_hflruyo',
@@ -42,6 +43,8 @@ export default {
                 'user_KKGeOCryoJdt5V45QFpqk'
             )
             .then(res => {
+                e.target.classList.add('hide')
+                this.$emit('show-thank-you')
                 console.log('Success!', res.status, res.text)
             }, err => {
                 console.log('Failed', err)
@@ -109,5 +112,8 @@ button:hover, button:focus {
     border-color: #212121;
     background: #212121;
     color: #fff;
+}
+.hide {
+    display: none;
 }
 </style>
