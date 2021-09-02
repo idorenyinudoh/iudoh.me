@@ -60,6 +60,9 @@ export default {
             message: ''
         }
     },
+    beforeCreate() {
+        document.title = 'Idorenyin Udoh'
+    },
     methods: {
         getCharactersLeft() {
             this.charactersLeft = 500 - this.message.length;

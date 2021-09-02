@@ -70,6 +70,9 @@ export default {
             initialScrollY: 0
         }
     },
+    beforeCreate() {
+        document.title+=` | ${this.name}`
+    },
     beforeMount() {
         window.addEventListener('scroll', this.toggleNavVisibility)
     },
