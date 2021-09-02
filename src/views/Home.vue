@@ -33,16 +33,7 @@ section#works
 section#contact.left-heading
     h2 contact
     p If you want to say hi, or hire me:
-    form
-        label Name:
-            input(type="text", name="name", id="name", placeholder="Tobias Lütke", required)
-        label Email:
-            input(type="email", name="email", id="email", placeholder="tobiaslütke@shopify.com", required)
-        label Subject:
-            input(type="text", name="subject", id="subject", placeholder="Employment Request", required)
-        label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
-            textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
-        button(type="submit") Submit
+    contact-form
     #socials
         p: a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") linkedin
         p: a(href="https://github.com/idorenyinudoh", target="_blank") github
@@ -51,25 +42,16 @@ Footer
 
 <script>
 import Footer from '@/components/Footer.vue'
+import ContactForm from '@/components/ContactForm.vue'
 
 export default {
     name: 'Home',
-    data() {
-        return {
-            charactersLeft: 500,
-            message: ''
-        }
-    },
     beforeCreate() {
         document.title = 'Idorenyin Udoh'
     },
-    methods: {
-        getCharactersLeft() {
-            this.charactersLeft = 500 - this.message.length;
-        }
-    },
     components: {
-        Footer
+        Footer,
+        ContactForm
     }
 }
 </script>
@@ -92,12 +74,6 @@ export default {
     }
     .texts {
         padding: 20px;
-    }
-    form {
-        grid-template-columns: 1fr 1fr;
-    }
-    label:nth-child(4), button {
-        grid-column: 1 / 2;
     }
 }
 @media screen and (max-width: 659px) {
@@ -236,59 +212,9 @@ ul ul li {
 #contact > p {
     margin-bottom: calc(30px + 1vw);
 }
-form {
-    display: grid;
-    gap: calc(20px + 1vw);
-}
-label {
-    display: grid;
-    row-gap: calc(2px + 0.5vw);
-    font-size: 24px;
-}
-label:nth-child(4) {
-    position: relative;
-    margin-bottom: calc(30px + 1vw);
-}
-label:nth-child(4)::after {
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    font-size: 18px;
-    content: attr(data-characters-left);
-
-}
-input, textarea {
-    border: 2px solid #808080;
-    padding: 10px 5px;
-    font-size: 20px;
-    letter-spacing: inherit;
-    outline: none;
-}
-textarea {
-    font-family: inherit;
-}
-input:focus, textarea:focus {
-    border-color: #000;
-}
-button {
-    margin: 20px 0 50px 0;
-    border: 2px solid #808080;
-    padding: 8px 8px 8px 6px;
-    background: inherit;
-    font-family: inherit;
-    font-size: 20px;
-    letter-spacing: inherit;
-    cursor: pointer;
-}
-button:hover, button:focus {
-    outline: none;
-    border-color: #212121;
-    background: #212121;
-    color: #fff;
-}
 #socials {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(2, max-content);
     column-gap: calc(20px + 1vw);
     justify-content: center;
 }
