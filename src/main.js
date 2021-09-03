@@ -7,7 +7,7 @@ createApp(App)
 .use(router)
 .use(VueGTag, {
     config: {
-        id: 'G-7HTEDCCE8L'
+        id: process.env.VUE_APP_GA_ID
     }
 })
 .mount('body')
