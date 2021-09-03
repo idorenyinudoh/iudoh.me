@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "emailjs-com": "^3.2.0",
     "vue": "^3.0.0",
+    "vue-gtag": "^2.0.1",
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
