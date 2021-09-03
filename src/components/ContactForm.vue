@@ -33,15 +33,15 @@ export default {
         },
         submitForm(e) {
             emailjs.send(
-                'service_a23ks2u',
-                'template_hflruyo',
+                process.env.VUE_APP_SERVICE_ID,
+                process.env.VUE_APP_TEMPLATE_ID,
                 {
                     name: this.name,
                     email: this.email,
                     subject: this.subject,
                     message: this.message
                 },
-                'user_KKGeOCryoJdt5V45QFpqk'
+                process.env.VUE_APP_USER_ID
             )
             .then(() => {
                 e.target.classList.add('hide')
