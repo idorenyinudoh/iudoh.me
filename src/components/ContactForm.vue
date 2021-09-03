@@ -1,4 +1,5 @@
 <template lang="pug">
+p.form-greeting If you want to say hi, or hire me:
 p.error-message.hide It's not me so it's either you or the internet. Either way, try submitting the form again.
 p.thank-you.hide Thank you! I'll reply you shooooortlyyy.
 form(@submit.prevent="submitForm")
@@ -44,6 +45,7 @@ export default {
                 process.env.VUE_APP_USER_ID
             )
             .then(() => {
+                document.querySelector('.form-greeting').classList.add('hide')
                 e.target.classList.add('hide')
                 document.querySelector('.thank-you').classList.remove('hide')
             }, () => {
@@ -67,7 +69,7 @@ export default {
     }
 }
 p {
-    margin: calc(20px + 1vw) 0;
+    margin: 0 0 calc(30px + 1vw) 0;
     font-size: 24px;
 }
 .error-message {

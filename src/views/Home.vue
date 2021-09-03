@@ -32,7 +32,6 @@ section#works
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
 section#contact.left-heading
     h2 contact
-    p If you want to say hi, or hire me:
     contact-form
     #socials
         p: a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") linkedin
