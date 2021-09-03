@@ -33,7 +33,7 @@ section#works
 section#contact.left-heading
     h2 contact
     p If you want to say hi, or hire me:
-    contact-form(@show-thank-you="showThankYou")
+    contact-form
     #socials
         p: a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") linkedin
         p: a(href="https://github.com/idorenyinudoh", target="_blank") github
@@ -48,11 +48,6 @@ export default {
     name: 'Home',
     beforeCreate() {
         document.title = 'Idorenyin Udoh'
-    },
-    methods: {
-        showThankYou() {
-            document.querySelector('#contact p').textContent = "Thank you! I'll reply you shooooortlyyy."
-        }
     },
     components: {
         Footer,

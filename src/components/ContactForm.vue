@@ -1,4 +1,6 @@
 <template lang="pug">
+p.error-message.hide It's not me so it's either you or the internet. Either way, try submitting the form again.
+p.thank-you.hide Thank you! I'll reply you shooooortlyyy.
 form(@submit.prevent="submitForm")
     label Name:
         input(type="text", name="name", id="name", placeholder="Tobias Lütke", v-model="name", required)
@@ -25,7 +27,6 @@ export default {
             message: ''
         }
     },
-    emits: ['show-thank-you'],
     methods: {
         getCharactersLeft() {
             this.charactersLeft = 500 - this.message.length;
@@ -42,12 +43,14 @@ export default {
                 },
                 'user_KKGeOCryoJdt5V45QFpqk'
             )
-            .then(res => {
+            .then(() => {
                 e.target.classList.add('hide')
-                this.$emit('show-thank-you')
-                console.log('Success!', res.status, res.text)
-            }, err => {
-                console.log('Failed', err)
+                document.querySelector('.thank-you').classList.remove('hide')
+            }, () => {
+                const errorMessageElement = document.querySelector('.error-message')
+
+                errorMessageElement.classList.remove('hide')
+                errorMessageElement.scrollIntoView({ behavior: 'smooth' })
             })
         }
     }
@@ -62,6 +65,13 @@ export default {
     label:nth-child(4), button {
         grid-column: 1 / 2;
     }
+}
+p {
+    margin: calc(20px + 1vw) 0;
+    font-size: 24px;
+}
+.error-message {
+    color: #dc1a1a;
 }
 form {
     display: grid;
