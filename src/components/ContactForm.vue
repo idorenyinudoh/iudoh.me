@@ -6,7 +6,7 @@ form(@submit.prevent="submitForm")
     label Name:
         input(type="text", name="name", id="name", placeholder="Tobias Lütke", v-model="name", required)
     label Email:
-        input(type="email", name="email", id="email", placeholder="tobiaslütke@shopify.com", v-model="email", required)
+        input(type="email", name="email", id="email", placeholder="probablytobiaslütke@shopify.com", v-model="email", required)
     label Subject:
         input(type="text", name="subject", id="subject", placeholder="Employment Request", v-model="subject", required)
     label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
