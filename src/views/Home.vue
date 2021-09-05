@@ -83,17 +83,6 @@ export default {
         padding: 20px 10px;
     }
 }
-a {
-    color: #00f;
-    text-decoration: none;
-    outline: none;
-}
-a:hover, a:focus {
-    text-decoration: underline;
-}
-a:visited {
-    color: #551a8b;
-}
 header {
     height: calc(100vh - 40px - 2vw);
     padding: calc(20px + 1vw);
@@ -101,43 +90,20 @@ header {
     align-content: center;
     row-gap: 10px;
 }
-p {
-    margin: 0;
-    font-size: 24px;
-}
 h1 {
     margin: 0;
     width: 90%;
-    padding-bottom: 10px;
-    border-bottom: 2px solid;
-    font-weight: 500;
-    font-size: 48px;
 }
 #about {
     margin-top: 13px;
-}
-#about p:not(:last-child) {
-    margin-bottom: calc(10px + 1vw);
+    display: grid;
+    row-gap: calc(10px + 1vw);
 }
 small {
     font-size: 16px;
 }
 section {
-    position: relative;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
     margin: calc(90px + 1vw) 0;
-    padding: calc(40px + 1vw) calc(30px + 1vw);
-}
-h2 {
-    position: absolute;
-    right: 5vw;
-    top: -21px;
-    margin: 0;
-    padding: 0 calc(10px + 1vw);
-    font-weight: 500;
-    font-size: 32px;
-    background: white;
 }
 #works {
     padding: calc(50px + 1vw) calc(30px + 1vw);
@@ -158,16 +124,6 @@ hr {
     background-color: #000;
     height: 2px;
     width: 80%;
-}
-.image-container {
-    position: relative;
-    padding-top: 75%;
-}
-img {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
 }
 .texts {
     display: grid;
@@ -203,10 +159,6 @@ ul ul li {
 }
 .left-heading {
     margin-bottom: 0;
-}
-.left-heading h2 {
-    left: 5vw;
-    right: auto;
 }
 #contact > p {
     margin-bottom: calc(30px + 1vw);

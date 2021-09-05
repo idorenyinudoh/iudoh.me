@@ -203,14 +203,6 @@ nav a:hover {
 h1 {
     margin: 0 0 20px 0;
     width: calc(90% - 40px);
-    padding-bottom: 10px;
-    border-bottom: 2px solid;
-    font-weight: 500;
-    font-size: 48px;
-}
-p {
-    margin: 0;
-    font-size: 24px;
 }
 main {
     margin-top: calc(30px + 1vw);
@@ -223,52 +215,10 @@ main {
     box-sizing: border-box;
     border: 2px solid #000;
 }
-.image-container {
-    position: relative;
-    padding-top: 75%;
-}
-img {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-section {
-    position: relative;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    /* margin: calc(90px + 1vw) 0; */
-    padding: calc(40px + 1vw) calc(30px + 1vw);
-}
-h2 {
-    position: absolute;
-    right: 5vw;
-    top: -21px;
-    margin: 0;
-    padding: 0 calc(10px + 1vw);
-    font-weight: 500;
-    font-size: 32px;
-    background: white;
-}
-.left-heading h2 {
-    left: 5vw;
-    right: auto;
-}
 section p {
     margin: 0;
 }
 section p:not(:last-child) {
     margin-bottom: calc(10px + 1vw);
-}
-a {
-    color: #00f;
-    text-decoration: none;
-    outline: none;
-}
-a:hover, a:focus {
-    text-decoration: underline;
-}
-a:visited {
-    color: #551a8b;
 }
 </style>

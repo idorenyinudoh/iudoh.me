@@ -70,7 +70,6 @@ export default {
 }
 p {
     margin: 0 0 calc(30px + 1vw) 0;
-    font-size: 24px;
 }
 .error-message {
     color: #dc1a1a;
