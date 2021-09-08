@@ -8,32 +8,32 @@ header
         .image-container
             img(:src="screenshot1src",:alt="alt1")
 main
-    section.left-heading
-        h2 project purpose
+    section
+        base-heading(position="left" heading="project purpose")
         p(v-for="purpose in purposes" v-html="purpose")
     section
-        h2 tech stack
+        base-heading(position="right" heading="tech stack")
         .container    
             .image-container
                 img(:src="screenshot2src",:alt="alt2")
         div
             p(v-for="stack in stacks" v-html="stack")
-    section.left-heading
-        h2 challenges
+    section
+        base-heading(position="left" heading="challenges")
         div
             p(v-for="challenge in challenges" v-html="challenge")
         .container    
             .image-container
                 img(:src="screenshot3src",:alt="alt3")
     section
-        h2 lessons
+        base-heading(position="right" heading="lessons")
         .container    
             .image-container
                 img(:src="screenshot4src",:alt="alt4")
         div
             p(v-for="lesson in lessons" v-html="lesson")
-    section.left-heading
-        h2 check it out
+    section
+        base-heading(position="left" heading="check it out")
         p: a(:href="repo", target="_blank") codebase repository
         p: a(:href="url", target="_blank") live
 the-footer

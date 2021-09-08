@@ -51,18 +51,4 @@ section {
   border-bottom: 2px solid;
   padding: calc(40px + 1vw) calc(30px + 1vw);
 }
-h2 {
-  position: absolute;
-  right: 5vw;
-  top: -21px;
-  margin: 0;
-  padding: 0 calc(10px + 1vw);
-  font-weight: 500;
-  font-size: 32px;
-  background: white;
-}
-.left-heading h2 {
-  left: 5vw;
-  right: auto;
-}
 </style>

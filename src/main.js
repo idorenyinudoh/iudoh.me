@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import VueGTag from 'vue-gtag'
 import TheFooter from './components/TheFooter.vue'
+import BaseHeading from './components/BaseHeading.vue'
 
 const app = createApp(App)
 
@@ -15,5 +16,6 @@ app
 })
 
 app.component('the-footer', TheFooter)
+app.component('base-heading', BaseHeading)
 
 app.mount('body')
