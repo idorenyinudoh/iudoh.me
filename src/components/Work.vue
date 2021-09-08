@@ -36,14 +36,11 @@ main
         h2 check it out
         p: a(:href="repo", target="_blank") codebase repository
         p: a(:href="url", target="_blank") live
-Footer
+the-footer
 </template>
 
 <script>
-import Footer from './Footer.vue'
-
 export default {
-    name: 'Work',
     props: {
         name: String,
         summary: String,
@@ -61,9 +58,6 @@ export default {
         lessons: Array,
         repo: String,
         url: String
-    },
-    components: {
-        Footer
     },
     data() {
         return {

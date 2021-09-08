@@ -36,20 +36,17 @@ section#contact.left-heading
     #socials
         p: a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") linkedin
         p: a(href="https://github.com/idorenyinudoh", target="_blank") github
-Footer
+the-footer
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue'
 import ContactForm from '@/components/ContactForm.vue'
 
 export default {
-    name: 'Home',
     beforeCreate() {
         document.title = 'Idorenyin Udoh'
     },
     components: {
-        Footer,
         ContactForm
     }
 }
