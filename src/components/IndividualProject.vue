@@ -1,49 +1,43 @@
 <template lang="pug">
-nav
-    p: router-link(to="/") Idorenyin Udoh
+the-nav
 header
     h1 {{ name }}
     p {{ summary }}
-    .container    
-        .image-container
-            img(:src="screenshot1src",:alt="alt1")
+    .container
+        base-image(:src="screenshot1src" :alt="alt1")
 main
-    section.left-heading
-        h2 project purpose
+    section
+        base-heading(position="left" heading="project purpose")
         p(v-for="purpose in purposes" v-html="purpose")
     section
-        h2 tech stack
+        base-heading(position="right" heading="tech stack")
         .container    
-            .image-container
-                img(:src="screenshot2src",:alt="alt2")
+            base-image(:src="screenshot2src" :alt="alt2")
         div
             p(v-for="stack in stacks" v-html="stack")
-    section.left-heading
-        h2 challenges
+    section
+        base-heading(position="left" heading="challenges")
         div
             p(v-for="challenge in challenges" v-html="challenge")
         .container    
-            .image-container
-                img(:src="screenshot3src",:alt="alt3")
+            base-image(:src="screenshot3src" :alt="alt3")
     section
-        h2 lessons
+        base-heading(position="right" heading="lessons")
         .container    
-            .image-container
-                img(:src="screenshot4src",:alt="alt4")
+            base-image(:src="screenshot4src" :alt="alt4")
         div
             p(v-for="lesson in lessons" v-html="lesson")
-    section.left-heading
-        h2 check it out
+    section
+        base-heading(position="left" heading="check it out")
         p: a(:href="repo", target="_blank") codebase repository
         p: a(:href="url", target="_blank") live
-Footer
+the-footer
 </template>
 
 <script>
-import Footer from './Footer.vue'
+import TheNav from './TheNav.vue'
 
 export default {
-    name: 'Work',
     props: {
         name: String,
         summary: String,
@@ -62,48 +56,11 @@ export default {
         repo: String,
         url: String
     },
-    components: {
-        Footer
-    },
-    data() {
-        return {
-            initialScrollY: 0
-        }
-    },
     beforeCreate() {
         document.title+=` | ${this.name}`
     },
-    beforeMount() {
-        window.addEventListener('scroll', this.toggleNavVisibility)
-    },
-    mounted() {
-        this.initialScrollY = window.scrollY;
-    },
-    beforeUnmount() {
-        window.removeEventListener('scroll', this.toggleNavVisibility)
-    },
-    methods: {
-        toggleNavVisibility() {
-            const nav = document.querySelector('nav');
-
-            if(window.scrollY > this.initialScrollY) {
-                this.initialScrollY = window.scrollY
-                if(nav.classList.contains('hide-nav')) {
-                    return;
-                } else if(nav.classList.contains('show-nav')) {
-                    nav.classList.replace('show-nav', 'hide-nav')
-                } else {
-                    nav.classList.add('hide-nav')
-                }
-            } else {
-                this.initialScrollY = window.scrollY
-                if(nav.classList.contains('show-nav')) {
-                    return;
-                } else if(nav.classList.contains('hide-nav')) {
-                    nav.classList.replace('hide-nav', 'show-nav')
-                }
-            }
-        }
+    components: {
+        TheNav
     }
 }
 </script>
@@ -171,35 +128,6 @@ export default {
 header {
     display: grid;
 }
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    box-sizing: border-box;
-    border-bottom: 2px solid #000;
-    padding: 20px calc(30px + 1vw);
-    box-shadow: 1px 1px 5px 0px #000;
-    z-index: 2;
-    background: #ffa826;
-    transition: transform 500ms ease-in-out;
-}
-nav p {
-    font-size: 32px;
-}
-nav a, nav a:visited {
-    color: #000;
-}
-nav a:hover {
-    text-decoration: none;
-}
-.hide-nav {
-    transform: translateY(-90px);
-}
-.show-nav {
-    transform: translateY(0px);
-}
 h1 {
     margin: 0 0 20px 0;
     width: calc(90% - 40px);
@@ -214,9 +142,6 @@ main {
     max-width: 500px;
     box-sizing: border-box;
     border: 2px solid #000;
-}
-section p {
-    margin: 0;
 }
 section p:not(:last-child) {
     margin-bottom: calc(10px + 1vw);

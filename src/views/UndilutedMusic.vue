@@ -1,9 +1,9 @@
 <template lang="pug">
-Work(:="props")
+individual-project(:="props")
 </template>
 
 <script>
-import Work from "@/components/Work.vue"
+import IndividualProject from "@/components/IndividualProject.vue"
 
 const props = {
     name: 'undiluted music',
@@ -45,18 +45,13 @@ const props = {
 }
 
 export default {
-    name: 'UndilutedMusic',
     data() {
         return {
             props
         }
     },
     components: {
-        Work
+        IndividualProject
     }
 }
 </script>
-
-<style>
-
-</style>

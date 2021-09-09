@@ -11,11 +11,12 @@ form(@submit.prevent="submitForm")
         input(type="text", name="subject", id="subject", placeholder="Employment Request", v-model="subject", required)
     label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
         textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
-    button(type="submit") Submit
+    base-button Submit
 </template>
 
 <script>
 import emailjs from 'emailjs-com'
+import BaseButton from './BaseButton.vue'
 
 export default {
     name: 'contact-form',
@@ -27,6 +28,9 @@ export default {
             subject: '',
             message: ''
         }
+    },
+    components: {
+        BaseButton
     },
     methods: {
         getCharactersLeft() {
@@ -107,22 +111,6 @@ textarea {
 }
 input:focus, textarea:focus {
     border-color: #000;
-}
-button {
-    margin: 20px 0 50px 0;
-    border: 2px solid #808080;
-    padding: 8px 8px 8px 6px;
-    background: inherit;
-    font-family: inherit;
-    font-size: 20px;
-    letter-spacing: inherit;
-    cursor: pointer;
-}
-button:hover, button:focus {
-    outline: none;
-    border-color: #212121;
-    background: #212121;
-    color: #fff;
 }
 .hide {
     display: none;

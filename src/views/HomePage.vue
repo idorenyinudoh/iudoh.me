@@ -2,23 +2,22 @@
 header
     h1 Idorenyin Udoh
     p frontend developer &amp; technical writer
-section#about.left-heading
-    h2 about me
+section#about
+    base-heading(position="left" heading="about me")
     p I'm a Frontend developer and Technical writer from Akwa Ibom, Nigeria. I have a BSc in Computer Science from Babcock University.
     p I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm currently getting better at Vue, I always work with Git, and my preferred template engine is Pug.
     p I often write articles when I learn new technologies as I want to give back to the community 
         small and make a few bucks.
 section#works
-    h2 my works
+    base-heading(position="right" heading="my works")
     article
-        .image-container
-            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png", alt="undiluted music landing page screenshot")
+        base-image(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png" alt="undiluted music landing page screenshot")
         .texts
             h3 undiluted music
             p a website that gives users access to stream and download songs.
             router-link(to="/undiluted-music") Learn More
     hr
-    p Some of my technical articles:
+    h3 Some of my technical articles:
     ul
         li CSS-Tricks
             ul
@@ -30,26 +29,23 @@ section#works
         li Medium
             ul
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
-section#contact.left-heading
-    h2 contact
+section#contact
+    base-heading(position="left" heading="contact")
     contact-form
     #socials
         p: a(href="https://linkedin.com/in/idorenyinudoh", target="_blank") linkedin
         p: a(href="https://github.com/idorenyinudoh", target="_blank") github
-Footer
+the-footer
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue'
 import ContactForm from '@/components/ContactForm.vue'
 
 export default {
-    name: 'Home',
     beforeCreate() {
         document.title = 'Idorenyin Udoh'
     },
     components: {
-        Footer,
         ContactForm
     }
 }
@@ -102,11 +98,8 @@ h1 {
 small {
     font-size: 16px;
 }
-section {
+section:not(:last-of-type) {
     margin: calc(90px + 1vw) 0;
-}
-#works {
-    padding: calc(50px + 1vw) calc(30px + 1vw);
 }
 article {
     display: grid;
@@ -156,15 +149,6 @@ ul ul {
 }
 ul ul li {
     margin: calc(5px + 1vw);
-}
-.left-heading {
-    margin-bottom: 0;
-}
-#contact > p {
-    margin-bottom: calc(30px + 1vw);
-}
-.hide {
-    display: none;
 }
 #socials {
     display: grid;
