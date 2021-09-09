@@ -1,6 +1,5 @@
 <template lang="pug">
-nav
-    p: router-link(to="/") Idorenyin Udoh
+the-nav
 header
     h1 {{ name }}
     p {{ summary }}
@@ -36,6 +35,8 @@ the-footer
 </template>
 
 <script>
+import TheNav from './TheNav.vue'
+
 export default {
     props: {
         name: String,
@@ -55,45 +56,11 @@ export default {
         repo: String,
         url: String
     },
-    data() {
-        return {
-            initialScrollY: 0
-        }
-    },
     beforeCreate() {
         document.title+=` | ${this.name}`
     },
-    beforeMount() {
-        window.addEventListener('scroll', this.toggleNavVisibility)
-    },
-    mounted() {
-        this.initialScrollY = window.scrollY;
-    },
-    beforeUnmount() {
-        window.removeEventListener('scroll', this.toggleNavVisibility)
-    },
-    methods: {
-        toggleNavVisibility() {
-            const nav = document.querySelector('nav');
-
-            if(window.scrollY > this.initialScrollY) {
-                this.initialScrollY = window.scrollY
-                if(nav.classList.contains('hide-nav')) {
-                    return;
-                } else if(nav.classList.contains('show-nav')) {
-                    nav.classList.replace('show-nav', 'hide-nav')
-                } else {
-                    nav.classList.add('hide-nav')
-                }
-            } else {
-                this.initialScrollY = window.scrollY
-                if(nav.classList.contains('show-nav')) {
-                    return;
-                } else if(nav.classList.contains('hide-nav')) {
-                    nav.classList.replace('hide-nav', 'show-nav')
-                }
-            }
-        }
+    components: {
+        TheNav
     }
 }
 </script>
@@ -160,35 +127,6 @@ export default {
 }
 header {
     display: grid;
-}
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    box-sizing: border-box;
-    border-bottom: 2px solid #000;
-    padding: 20px calc(30px + 1vw);
-    box-shadow: 1px 1px 5px 0px #000;
-    z-index: 2;
-    background: #ffa826;
-    transition: transform 500ms ease-in-out;
-}
-nav p {
-    font-size: 32px;
-}
-nav a, nav a:visited {
-    color: #000;
-}
-nav a:hover {
-    text-decoration: none;
-}
-.hide-nav {
-    transform: translateY(-90px);
-}
-.show-nav {
-    transform: translateY(0px);
 }
 h1 {
     margin: 0 0 20px 0;
