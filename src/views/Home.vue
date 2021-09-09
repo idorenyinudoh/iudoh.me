@@ -101,9 +101,6 @@ small {
 section {
     margin: calc(90px + 1vw) 0;
 }
-#works {
-    padding: calc(50px + 1vw) calc(30px + 1vw);
-}
 article {
     display: grid;
     border: 2px solid;
@@ -155,12 +152,6 @@ ul ul li {
 }
 .left-heading {
     margin-bottom: 0;
-}
-#contact > p {
-    margin-bottom: calc(30px + 1vw);
-}
-.hide {
-    display: none;
 }
 #socials {
     display: grid;
