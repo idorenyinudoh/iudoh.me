@@ -18,7 +18,7 @@ section#works
             p a website that gives users access to stream and download songs.
             router-link(to="/undiluted-music") Learn More
     hr
-    p Some of my technical articles:
+    h3 Some of my technical articles:
     ul
         li CSS-Tricks
             ul
