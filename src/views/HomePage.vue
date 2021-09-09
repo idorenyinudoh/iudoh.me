@@ -98,7 +98,7 @@ h1 {
 small {
     font-size: 16px;
 }
-section {
+section:not(:last-of-type) {
     margin: calc(90px + 1vw) 0;
 }
 article {
@@ -149,9 +149,6 @@ ul ul {
 }
 ul ul li {
     margin: calc(5px + 1vw);
-}
-.left-heading {
-    margin-bottom: 0;
 }
 #socials {
     display: grid;
