@@ -11,8 +11,7 @@ section#about
 section#works
     base-heading(position="right" heading="my works")
     article
-        .image-container
-            img(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png", alt="undiluted music landing page screenshot")
+        base-image(src="https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png" alt="undiluted music landing page screenshot")
         .texts
             h3 undiluted music
             p a website that gives users access to stream and download songs.

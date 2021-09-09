@@ -35,16 +35,6 @@ h1 {
   font-weight: 500;
   font-size: 48px;
 }
-.image-container {
-  position: relative;
-  padding-top: 75%;
-}
-img {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
 section {
   position: relative;
   border-top: 2px solid;

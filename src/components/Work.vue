@@ -4,9 +4,8 @@ nav
 header
     h1 {{ name }}
     p {{ summary }}
-    .container    
-        .image-container
-            img(:src="screenshot1src",:alt="alt1")
+    .container
+        base-image(:src="screenshot1src" :alt="alt1")
 main
     section
         base-heading(position="left" heading="project purpose")
@@ -14,8 +13,7 @@ main
     section
         base-heading(position="right" heading="tech stack")
         .container    
-            .image-container
-                img(:src="screenshot2src",:alt="alt2")
+            base-image(:src="screenshot2src" :alt="alt2")
         div
             p(v-for="stack in stacks" v-html="stack")
     section
@@ -23,13 +21,11 @@ main
         div
             p(v-for="challenge in challenges" v-html="challenge")
         .container    
-            .image-container
-                img(:src="screenshot3src",:alt="alt3")
+            base-image(:src="screenshot3src" :alt="alt3")
     section
         base-heading(position="right" heading="lessons")
         .container    
-            .image-container
-                img(:src="screenshot4src",:alt="alt4")
+            base-image(:src="screenshot4src" :alt="alt4")
         div
             p(v-for="lesson in lessons" v-html="lesson")
     section
@@ -208,9 +204,6 @@ main {
     max-width: 500px;
     box-sizing: border-box;
     border: 2px solid #000;
-}
-section p {
-    margin: 0;
 }
 section p:not(:last-child) {
     margin-bottom: calc(10px + 1vw);
