@@ -18,17 +18,20 @@ section#works
             router-link(to="/undiluted-music") Learn More
     hr
     h3 Some of my technical articles:
-    ul
-        li CSS-Tricks
-            ul
-                li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/" target="_blank") Give Users Control: The Media Session API
-                li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/" target="_blank") Let's Create a Custom Audio Player
-        li freeCodeCamp
-            ul
-                li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/" target="_blank") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
-        li Medium
-            ul
-                li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
+    base-ul
+        base-li(item="CSS-Tricks")
+            base-ul-ul
+                base-li: a(href="https://css-tricks.com/give-users-control-the-media-session-api/" target="_blank") Give Users Control: The Media Session API
+                base-li: a(href="https://css-tricks.com/lets-create-a-custom-audio-player/" target="_blank") Let's Create a Custom Audio Player
+        base-li(item="freeCodeCamp")
+            base-ul-ul
+                base-li: a(href="https://www.freecodecamp.org/news/how-to-use-lottie-like-a-pro-resources-for-designers-and-developers/" target="_blank") How to Use the Lottie Library like a Pro - Lottie Resources for Designers and Developers
+        base-li(item="Medium")
+            base-ul-ul
+                base-li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
+    p Find all my articles 
+        router-link(to="/articles") here
+        | .
 section#contact
     base-heading(position="left" heading="contact")
     contact-form
@@ -39,6 +42,9 @@ the-footer
 </template>
 
 <script>
+import BaseUl from '@/components/BaseUl.vue'
+import BaseLi from '@/components/BaseLi.vue'
+import BaseUlUl from '@/components/BaseUlUl.vue'
 import ContactForm from '@/components/ContactForm.vue'
 
 export default {
@@ -46,6 +52,9 @@ export default {
         document.title = 'Idorenyin Udoh'
     },
     components: {
+        BaseUl,
+        BaseLi,
+        BaseUlUl,
         ContactForm
     }
 }
@@ -133,22 +142,6 @@ h3 {
 }
 .texts p, .texts a {
     font-size: 18px;
-}
-ul {
-    margin: calc(20px + 1vw) calc(10px + 1vw);
-    font-size: 24px;
-    padding: 0 0 0 25px;
-    list-style-type: disc;
-}
-ul > li {
-    margin-bottom: calc(10px + 1vw);
-}
-ul ul {
-    margin: calc(5px + 1vw);
-    list-style-type: circle;
-}
-ul ul li {
-    margin: calc(5px + 1vw);
 }
 #socials {
     display: grid;
