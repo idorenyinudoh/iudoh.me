@@ -29,6 +29,9 @@ section#works
         li Medium
             ul
                 li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
+    p Find all my articles 
+        router-link(to="/articles") here
+        | .
 section#contact
     base-heading(position="left" heading="contact")
     contact-form

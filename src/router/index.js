@@ -3,13 +3,15 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'Home',
     component: () => import('../views/HomePage.vue')
   },
   {
     path: '/undiluted-music',
-    name: 'Undiluted Music',
     component: () => import('../views/UndilutedMusic.vue')
+  },
+  {
+    path: '/articles',
+    component: () => import('../views/ArticlesPage.vue')
   }
 ]
 
