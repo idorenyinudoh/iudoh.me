@@ -57,7 +57,7 @@ export default {
         url: String
     },
     beforeCreate() {
-        document.title+=` | ${this.name}`
+        document.title =`Idorenyin Udoh | ${this.name}`
     },
     components: {
         TheNav

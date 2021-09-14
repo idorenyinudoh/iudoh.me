@@ -7,7 +7,7 @@ import TheNav from '@/components/TheNav.vue'
 
 export default {
     beforeCreate() {
-        document.title += ' | Articles'
+        document.title = 'Idorenyin Udoh | Articles'
     },
     components: {
         TheNav
