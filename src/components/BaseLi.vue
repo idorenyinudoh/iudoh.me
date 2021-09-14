@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style scoped>
-li {
+li:not(:last-of-type) {
     margin-bottom: calc(10px + 1vw);
 }
 </style>
