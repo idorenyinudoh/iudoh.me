@@ -36,12 +36,7 @@ div
 </template>
 
 <script>
-import TheNav from './TheNav.vue'
-
 export default {
-    components: {
-        TheNav
-    },
     props: {
         name: {
             required: true,

@@ -17,12 +17,8 @@ div
 
 <script>
 import { send } from 'emailjs-com'
-import BaseButton from './BaseButton.vue'
 
 export default {
-    components: {
-        BaseButton
-    },
     data() {
         return {
             charactersLeft: 500,
