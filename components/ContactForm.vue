@@ -1,17 +1,18 @@
 <template lang="pug">
-p.form-greeting If you want to say hi, or hire me:
-p.error-message.hide It's not me so it's either you or the internet. Either way, try submitting the form again.
-p.thank-you.hide Thank you! I'll reply you shooooortlyyy.
-form(@submit.prevent="submitForm")
-    label Name:
-        input(type="text", name="name", id="name", placeholder="Tobias Lütke", v-model="name", required)
-    label Email:
-        input(type="email", name="email", id="email", placeholder="probablytobiaslütke@shopify.com", v-model="email", required)
-    label Subject:
-        input(type="text", name="subject", id="subject", placeholder="Employment Request", v-model="subject", required)
-    label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
-        textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
-    base-button Submit
+div
+    p.form-greeting If you want to say hi, or hire me:
+    p.error-message.hide It's not me so it's either you or the internet. Either way, try submitting the form again.
+    p.thank-you.hide Thank you! I'll reply you shooooortlyyy.
+    form(@submit.prevent="submitForm")
+        label Name:
+            input(type="text", name="name", id="name", placeholder="Tobias Lütke", v-model="name", required)
+        label Email:
+            input(type="email", name="email", id="email", placeholder="probablytobiaslütke@shopify.com", v-model="email", required)
+        label Subject:
+            input(type="text", name="subject", id="subject", placeholder="Employment Request", v-model="subject", required)
+        label(:data-characters-left="charactersLeft === 1 ? charactersLeft + ' character left' : charactersLeft + ' characters left'") Message: 
+            textarea(maxlength="500", rows="10", name="message", id="message", placeholder="Hi Idorenyin!\n\nI was wondering if you would be willing to join us at Shopify as a Frontend developer. I would really love to have you on our team.", required, v-model="message", @input="getCharactersLeft")
+        base-button Submit
 </template>
 
 <script>

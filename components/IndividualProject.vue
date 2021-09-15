@@ -1,37 +1,38 @@
 <template lang="pug">
-the-nav
-header
-    h1 {{ name }}
-    p {{ summary }}
-    .container
-        base-image(:src="screenshot1src" :alt="alt1")
-main
-    section
-        base-heading(position="left" heading="project purpose")
-        p(v-for="purpose in purposes" v-html="purpose")
-    section
-        base-heading(position="right" heading="tech stack")
-        .container    
-            base-image(:src="screenshot2src" :alt="alt2")
-        div
-            p(v-for="stack in stacks" v-html="stack")
-    section
-        base-heading(position="left" heading="challenges")
-        div
-            p(v-for="challenge in challenges" v-html="challenge")
-        .container    
-            base-image(:src="screenshot3src" :alt="alt3")
-    section
-        base-heading(position="right" heading="lessons")
-        .container    
-            base-image(:src="screenshot4src" :alt="alt4")
-        div
-            p(v-for="lesson in lessons" v-html="lesson")
-    section
-        base-heading(position="left" heading="check it out")
-        p: a(:href="repo", target="_blank") codebase repository
-        p: a(:href="url", target="_blank") live
-the-footer
+div
+    the-nav
+    header
+        h1 {{ name }}
+        p {{ summary }}
+        .container
+            base-image(:src="screenshot1src" :alt="alt1")
+    main
+        section
+            base-heading(position="left" heading="project purpose")
+            p(v-for="purpose in purposes" v-html="purpose")
+        section
+            base-heading(position="right" heading="tech stack")
+            .container    
+                base-image(:src="screenshot2src" :alt="alt2")
+            div
+                p(v-for="stack in stacks" v-html="stack")
+        section
+            base-heading(position="left" heading="challenges")
+            div
+                p(v-for="challenge in challenges" v-html="challenge")
+            .container    
+                base-image(:src="screenshot3src" :alt="alt3")
+        section
+            base-heading(position="right" heading="lessons")
+            .container    
+                base-image(:src="screenshot4src" :alt="alt4")
+            div
+                p(v-for="lesson in lessons" v-html="lesson")
+        section
+            base-heading(position="left" heading="check it out")
+            p: a(:href="repo", target="_blank") codebase repository
+            p: a(:href="url", target="_blank") live
+    the-footer
 </template>
 
 <script>
