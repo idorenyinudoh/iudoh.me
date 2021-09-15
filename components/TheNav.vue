@@ -1,6 +1,6 @@
 <template lang="pug">
 nav
-    p: router-link(to="/") Idorenyin Udoh
+    p: nuxt-link(to="/") Idorenyin Udoh
 </template>
 
 <script>

@@ -16,7 +16,7 @@ div
           .texts
               h3 undiluted music
               p a website that gives users access to stream and download songs.
-              router-link(to="/undiluted-music") Learn More
+              nuxt-link(to="/undiluted-music") Learn More
       hr
       h3 Some of my technical articles:
       base-ul
@@ -31,7 +31,7 @@ div
               base-ul-ul
                   base-li: a(href="https://bootcamp.uxdesign.cc/how-to-use-lottie-animations-on-the-web-cb222793d339" target="_blank") How to Use Lottie Animations on the Web
       p Find all my articles 
-          router-link(to="/articles") here
+          nuxt-link(to="/articles") here
           | .
   section#contact
       base-heading(position="left" heading="contact")
