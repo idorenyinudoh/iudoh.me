@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'iudoh.me',
+    title: 'Idorenyin Udoh',
     htmlAttrs: {
       lang: 'en'
     },
