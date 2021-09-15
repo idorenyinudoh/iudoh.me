@@ -15,7 +15,7 @@ form(@submit.prevent="submitForm")
 </template>
 
 <script>
-import emailjs from 'emailjs-com'
+import { send } from 'emailjs-com'
 import BaseButton from './BaseButton.vue'
 
 export default {
@@ -36,7 +36,7 @@ export default {
             this.charactersLeft = 500 - this.message.length;
         },
         submitForm(e) {
-            emailjs.send(
+            send(
                 'service_a23ks2u',
                 'template_hflruyo',
                 {
