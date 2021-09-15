@@ -19,7 +19,9 @@ import emailjs from 'emailjs-com'
 import BaseButton from './BaseButton.vue'
 
 export default {
-    name: 'contact-form',
+    components: {
+        BaseButton
+    },
     data() {
         return {
             charactersLeft: 500,
@@ -28,9 +30,6 @@ export default {
             subject: '',
             message: ''
         }
-    },
-    components: {
-        BaseButton
     },
     methods: {
         getCharactersLeft() {

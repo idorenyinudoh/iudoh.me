@@ -25,18 +25,14 @@ export default {
 
             if(window.scrollY > this.initialScrollY) {
                 this.initialScrollY = window.scrollY
-                if(nav.classList.contains('hide-nav')) {
-                    return;
-                } else if(nav.classList.contains('show-nav')) {
+                if(nav.classList.contains('show-nav')) {
                     nav.classList.replace('show-nav', 'hide-nav')
-                } else {
+                } else if(!nav.classList.contains('hide-nav')) {
                     nav.classList.add('hide-nav')
                 }
             } else {
                 this.initialScrollY = window.scrollY
-                if(nav.classList.contains('show-nav')) {
-                    return;
-                } else if(nav.classList.contains('hide-nav')) {
+                if(nav.classList.contains('hide-nav') && !nav.classList.contains('show-nav')) {
                     nav.classList.replace('hide-nav', 'show-nav')
                 }
             }
@@ -55,7 +51,7 @@ nav {
     box-sizing: border-box;
     border-bottom: 2px solid #000;
     padding: 20px calc(30px + 1vw);
-    box-shadow: 1px 1px 5px 0px #000;
+    box-shadow: 1px 1px 5px 0 #000;
     z-index: 2;
     background: #ffa826;
     transition: transform 500ms ease-in-out;
@@ -73,6 +69,6 @@ a:hover {
     transform: translateY(-90px);
 }
 .show-nav {
-    transform: translateY(0px);
+    transform: translateY(0);
 }
 </style>

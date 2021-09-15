@@ -38,29 +38,98 @@ the-footer
 import TheNav from './TheNav.vue'
 
 export default {
-    props: {
-        name: String,
-        summary: String,
-        screenshot1src: String,
-        alt1: String,
-        purposes: Array,
-        screenshot2src: String,
-        alt2: String,
-        stacks: Array,
-        challenges: Array,
-        screenshot3src: String,
-        alt3: String,
-        screenshot4src: String,
-        alt4: String,
-        lessons: Array,
-        repo: String,
-        url: String
-    },
-    beforeCreate() {
-        document.title =`Idorenyin Udoh | ${this.name}`
-    },
     components: {
         TheNav
+    },
+    props: {
+        name: {
+            required: true,
+            type: String,
+            default: 'name'   
+        },
+        summary: {
+            required: true,
+            type: String,
+            default: 'summary'   
+        },
+        screenshot1src: {
+            required: true,
+            type: String,
+            default: 'screenshot1src'   
+        },
+        alt1: {
+            required: true,
+            type: String,
+            default: 'alt1'   
+        },
+        purposes: {
+            required: true,
+            type: Array,
+            default() {
+                return ['this is because...']
+            }   
+        },
+        screenshot2src: {
+            required: true,
+            type: String,
+            default: 'screenshot2src'   
+        },
+        alt2: {
+            required: true,
+            type: String,
+            default: 'alt2'   
+        },
+        stacks: {
+            required: true,
+            type: Array,
+            default() {
+                return ['html', 'css']
+            }  
+        },
+        challenges: {
+            required: true,
+            type: Array,
+            default() {
+                return ['food', 'clothes', 'money']
+            }  
+        },
+        screenshot3src: {
+            required: true,
+            type: String,
+            default: 'screenshot3src'   
+        },
+        alt3: {
+            required: true,
+            type: String,
+            default: 'alt3'   
+        },
+        screenshot4src: {
+            required: true,
+            type: String,
+            default: 'screenshot4src'   
+        },
+        alt4: {
+            required: true,
+            type: String,
+            default: 'alt4'   
+        },
+        lessons: {
+            required: true,
+            type: Array,
+            default() {
+                return ['always do this...']
+            }
+        },
+        repo: {
+            required: true,
+            type: String,
+            default: 'repo'   
+        },
+        url: {
+            required: true,
+            type: String,
+            default: 'url'   
+        }
     }
 }
 </script>
@@ -88,11 +157,11 @@ export default {
     header {
         margin: 120px calc(20px + 1vw) 20px calc(20px + 1vw);
     }
-    section:not(:first-child):not(:nth-child(3)) p:first-child {
-        margin: calc(30px + 1vw) 0 calc(10px + 1vw) 0;
-    }
     section:nth-child(3) p:last-child {
         margin-bottom: calc(30px + 1vw);
+    }
+    section:not(:first-child):not(:nth-child(3)) p:first-child {
+        margin: calc(30px + 1vw) 0 calc(10px + 1vw) 0;
     }
 }
 @media screen and (min-width: 769px) {
