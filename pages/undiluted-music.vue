@@ -1,10 +1,8 @@
 <template lang="pug">
-individual-project(:="props")
+individual-project(v-bind="props")
 </template>
 
 <script>
-import IndividualProject from "@/components/IndividualProject.vue"
-
 const props = {
     name: 'undiluted music',
     summary: 'a website that gives users access to stream and download songs.',
@@ -47,11 +45,11 @@ const props = {
 export default {
     data() {
         return {
+            prop: {
+                name: props.name
+            },
             props
         }
-    },
-    components: {
-        IndividualProject
     }
 }
 </script>
