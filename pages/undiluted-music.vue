@@ -45,10 +45,12 @@ const props = {
 export default {
     data() {
         return {
-            prop: {
-                name: props.name
-            },
             props
+        }
+    },
+    head() {
+        return {
+            title: `Idorenyin Udoh | ${props.name}`
         }
     }
 }

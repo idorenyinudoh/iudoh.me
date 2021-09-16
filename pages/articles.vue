@@ -40,7 +40,13 @@ div
     the-footer
 </template>
 
-<script></script>
+<script>
+export default {
+    head: {
+        title: 'Idorenyin Udoh | Articles'
+    }
+}
+</script>
 
 <style scoped>
 main {
