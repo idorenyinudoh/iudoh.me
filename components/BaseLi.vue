@@ -1,5 +1,6 @@
 <template lang="pug">
-li {{ item }}
+li
+    span(v-if="item") {{ item }}
     slot
 </template>
 
