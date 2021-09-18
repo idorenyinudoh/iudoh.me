@@ -16,7 +16,7 @@ export default {
     mounted() {
         this.initialScrollY = window.scrollY;
     },
-    beforeUnmount() {
+    beforeDestroy() {
         window.removeEventListener('scroll', this.toggleNavVisibility)
     },
     methods: {
