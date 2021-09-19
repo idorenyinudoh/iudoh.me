@@ -42,7 +42,11 @@ div
   the-footer
 </template>
 
-<script></script>
+<script>
+export default {
+    layout: 'home'
+}
+</script>
 
 <style scoped>
 @media screen and (min-width: 800px) {

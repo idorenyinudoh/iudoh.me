@@ -1,6 +1,5 @@
 <template lang="pug">
 div
-    the-nav
     header
         h1 {{ name }}
         p {{ summary }}
@@ -32,7 +31,6 @@ div
             base-heading(position="left" heading="check it out")
             p: a(:href="repo", target="_blank") codebase repository
             p: a(:href="url", target="_blank") live
-    the-footer
 </template>
 
 <script>
