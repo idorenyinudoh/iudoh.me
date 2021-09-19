@@ -17,6 +17,7 @@
     "*.{css,vue}": "stylelint"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.15.1",
     "emailjs-com": "^3.2.0",
     "nuxt": "^2.15.7",
