@@ -1,7 +1,4 @@
 {
-  "env": {
-    "GOOGLE_ANALYTICS_ID": true
-  },
   "builds": [
     {
       "src": "nuxt.config.js",
