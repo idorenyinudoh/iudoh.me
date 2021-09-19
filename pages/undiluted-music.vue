@@ -49,13 +49,8 @@ const props = {
 export default {
   data() {
     return {
-      props,
+      props
     }
-  },
-  head() {
-    return {
-      title: `Idorenyin Udoh | ${props.name}`,
-    }
-  },
+  }
 }
 </script>

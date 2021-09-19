@@ -125,6 +125,11 @@ export default {
       default: 'url',
     },
   },
+  head() {
+    return {
+      title: `Idorenyin Udoh | ${this.name}`,
+    }
+  },
 }
 </script>
 
