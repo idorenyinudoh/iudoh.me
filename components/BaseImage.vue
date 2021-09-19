@@ -1,20 +1,20 @@
 <template lang="pug">
 .image-container
-    img(:src="src" :alt="alt")    
+  img(:src='src', :alt='alt') 
 </template>
 
 <script>
 export default {
-    props: {
-        src: {
-            type: String,
-            required: true
-        },
-        alt: {
-            type: String,
-            required: true
-        }
-    }
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
+    alt: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
