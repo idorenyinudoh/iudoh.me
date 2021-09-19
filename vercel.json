@@ -1,11 +1,11 @@
 {
+  "env": {
+    "GOOGLE_ANALYTICS_ID": true
+  },
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder"
     }
-  ],
-  "env": {
-    "GOOGLE_ANALYTICS_ID": true
-  }
+  ]
 }
