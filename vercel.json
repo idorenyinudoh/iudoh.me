@@ -4,5 +4,8 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder"
     }
-  ]
+  ],
+  "env": {
+    "GOOGLE_ANALYTICS_ID": true
+  }
 }
