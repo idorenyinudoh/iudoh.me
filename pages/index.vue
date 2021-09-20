@@ -60,6 +60,14 @@ div
 <script>
 export default {
   layout: 'home',
+  head: {
+    meta: [
+      {
+        name: 'keywords',
+        content: 'frontend developer, technical writer, frontend developer in nigeria, technical writer in nigeria, vue developer, nuxt developer'
+      }
+    ]
+  }
 }
 </script>
 

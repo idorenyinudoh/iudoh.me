@@ -1,14 +1,15 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Idorenyin Udoh',
+    title: 'Idorenyin Udoh - Frontend Developer & Technical Writer',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Frontend Developer and Technical Writer from Akwa Ibom, Nigeria.' },
+      { name: 'author', content: 'Idorenyin Udoh' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

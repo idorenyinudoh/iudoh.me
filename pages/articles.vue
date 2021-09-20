@@ -65,6 +65,13 @@ main
 export default {
   head: {
     title: 'Idorenyin Udoh | Articles',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Technical articles by Idorenyin Udoh.'
+      }
+    ]
   },
 }
 </script>

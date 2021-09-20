@@ -128,6 +128,13 @@ export default {
   head() {
     return {
       title: `Idorenyin Udoh | ${this.name}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.name} - a project developed by Idorenyin Udoh.`
+        }
+      ]
     }
   },
 }
