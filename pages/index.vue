@@ -5,9 +5,9 @@ div
     p frontend developer &amp; technical writer
   section#about
     base-heading(position='left', heading='about me')
-    p I'm a Frontend developer and Technical writer from Akwa Ibom, Nigeria. I have a BSc in Computer Science from Babcock University.
-    p I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm currently getting better at Vue, I always work with Git, and my preferred template engine is Pug.
-    p I often write articles when I learn new technologies as I want to give back to the community
+    p I'm a Frontend developer and Technical writer from Akwa Ibom, Nigeria.
+    p I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm proficient with Vue and Nuxt, I always work with Git, and my preferred template engine is Pug.
+    p I often write concise technical articles when I learn new technologies as I want to give back to the community
       small  and make a few bucks.
   section#works
     base-heading(position='right', heading='my works')
