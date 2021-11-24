@@ -8,6 +8,7 @@ footer {
   padding: calc(15px + 1vw);
   text-align: center;
 }
+
 p {
   font-size: 18px;
 }

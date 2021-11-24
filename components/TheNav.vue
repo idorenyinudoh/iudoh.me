@@ -59,19 +59,24 @@ nav {
   background: #ffa826;
   transition: transform 500ms ease-in-out;
 }
+
 p {
   font-size: 32px;
 }
+
 a,
 a:visited {
   color: #000;
 }
+
 a:hover {
   text-decoration: none;
 }
+
 .hide-nav {
   transform: translateY(-90px);
 }
+
 .show-nav {
   transform: translateY(0);
 }

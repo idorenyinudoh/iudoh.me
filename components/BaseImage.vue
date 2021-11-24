@@ -23,6 +23,7 @@ export default {
   position: relative;
   padding-top: 75%;
 }
+
 img {
   position: absolute;
   width: 100%;

@@ -94,30 +94,37 @@ export default {
   form {
     grid-template-columns: 1fr 1fr;
   }
+
   label:nth-child(4),
   button {
     grid-column: 1 / 2;
   }
 }
+
 p {
   margin: 0 0 calc(30px + 1vw) 0;
 }
+
 .error-message {
   color: #dc1a1a;
 }
+
 form {
   display: grid;
   gap: calc(20px + 1vw);
 }
+
 label {
   display: grid;
   row-gap: calc(2px + 0.5vw);
   font-size: 24px;
 }
+
 label:nth-child(4) {
   position: relative;
   margin-bottom: calc(30px + 1vw);
 }
+
 label:nth-child(4)::after {
   position: absolute;
   bottom: -30px;
@@ -125,6 +132,7 @@ label:nth-child(4)::after {
   font-size: 18px;
   content: attr(data-characters-left);
 }
+
 input,
 textarea {
   border: 2px solid #808080;
@@ -133,13 +141,16 @@ textarea {
   letter-spacing: inherit;
   outline: none;
 }
+
 textarea {
   font-family: inherit;
 }
+
 input:focus,
 textarea:focus {
   border-color: #000;
 }
+
 .hide {
   display: none;
 }

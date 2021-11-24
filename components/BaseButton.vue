@@ -14,6 +14,7 @@ button {
   letter-spacing: inherit;
   cursor: pointer;
 }
+
 button:hover,
 button:focus {
   outline: none;

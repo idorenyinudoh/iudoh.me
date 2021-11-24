@@ -36,10 +36,12 @@ h2 {
   font-size: 32px;
   background: white;
 }
+
 .left {
   left: 5vw;
   right: auto;
 }
+
 .right {
   left: auto;
   right: 5vw;

@@ -87,6 +87,7 @@ export default {
   .image-container {
     border-right: 1px solid;
   }
+
   .texts {
     padding: 20px;
   }
@@ -95,10 +96,12 @@ export default {
   .image-container {
     border-bottom: 1px solid;
   }
+
   .texts {
     padding: 20px 10px;
   }
 }
+
 header {
   height: calc(100vh - 40px - 2vw);
   padding: calc(20px + 1vw);
@@ -106,21 +109,26 @@ header {
   align-content: center;
   row-gap: 10px;
 }
+
 h1 {
   margin: 0;
   width: 90%;
 }
+
 #about {
   margin-top: 13px;
   display: grid;
   row-gap: calc(10px + 1vw);
 }
+
 small {
   font-size: 16px;
 }
+
 section:not(:last-of-type) {
   margin: calc(90px + 1vw) 0;
 }
+
 article {
   display: grid;
   border: 2px solid;
@@ -128,9 +136,11 @@ article {
   box-sizing: border-box;
   margin: 0 auto;
 }
+
 article:not(:last-child) {
   margin-bottom: calc(40px + 1vw);
 }
+
 hr {
   margin: calc(70px + 1vw) auto;
   border: none;
@@ -138,23 +148,28 @@ hr {
   height: 2px;
   width: 80%;
 }
+
 .texts {
   display: grid;
   row-gap: 10px;
   align-content: center;
 }
+
 .texts a {
   width: max-content;
 }
+
 h3 {
   margin: 0;
   font-size: 24px;
   font-weight: 500;
 }
+
 .texts p,
 .texts a {
   font-size: 18px;
 }
+
 #socials {
   display: grid;
   grid-template-columns: repeat(2, max-content);

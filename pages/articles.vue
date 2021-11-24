@@ -80,21 +80,26 @@ export default {
 main {
   margin-top: calc(150px + 1vw);
 }
+
 ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 li:not(:last-of-type) {
   margin-bottom: calc(20px + 1vw);
 }
+
 small {
   display: block;
   margin: 10px 0;
   font-size: 18px;
 }
+
 .logrocket {
   color: #764abc;
 }
+
 .css-tricks {
   background-image: linear-gradient(
     130deg,
@@ -105,6 +110,7 @@ small {
   background-clip: text;
   color: transparent;
 }
+
 .freecodecamp {
   color: #0a0a23;
 }

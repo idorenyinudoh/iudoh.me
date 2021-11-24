@@ -145,6 +145,7 @@ export default {
   header .container {
     margin: calc(25px + 1vw) auto;
   }
+
   section .container {
     margin: calc(5px + 1vw) auto;
   }
@@ -163,9 +164,11 @@ export default {
   header {
     margin: 120px calc(20px + 1vw) 20px calc(20px + 1vw);
   }
+
   section:nth-child(3) p:last-child {
     margin-bottom: calc(30px + 1vw);
   }
+
   section:not(:first-child):not(:nth-child(3)) p:first-child {
     margin: calc(30px + 1vw) 0 calc(10px + 1vw) 0;
   }
@@ -176,48 +179,59 @@ export default {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
   }
+
   h1 {
     align-self: flex-end;
   }
+
   header p {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
+
   header .container {
     grid-row: 1 / 3;
   }
+
   section:not(:first-child) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: calc(20px + 1vw);
     place-items: center;
   }
+
   section:last-child {
     grid-template-columns: max-content max-content;
     justify-content: center;
   }
+
   section:last-child p:not(:first-child) {
     margin-bottom: 0;
   }
 }
+
 header {
   display: grid;
 }
+
 h1 {
   margin: 0 0 20px 0;
   width: calc(90% - 40px);
 }
+
 main {
   margin-top: calc(30px + 1vw);
   display: grid;
   row-gap: calc(90px + 1vw);
 }
+
 .container {
   width: 100%;
   max-width: 500px;
   box-sizing: border-box;
   border: 2px solid #000;
 }
+
 section p:not(:last-child) {
   margin-bottom: calc(10px + 1vw);
 }
