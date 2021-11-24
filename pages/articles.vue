@@ -5,6 +5,13 @@ main
     base-ul
       base-li
         a(
+          href='https://blog.logrocket.com/troubleshooting-nested-pages-nuxt/',
+          target='_blank'
+        ) Troubleshooting Nested Pages in Nuxt
+        small 24 November, 2021 ·
+          span.logrocket  LogRocket's Blog
+      base-li
+        a(
           href='https://blog.logrocket.com/the-web-animations-api-vs-css/',
           target='_blank'
         ) The Web Animations API vs CSS
