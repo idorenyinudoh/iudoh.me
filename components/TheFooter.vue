@@ -1,7 +1,18 @@
 <template lang="pug">
 footer
-  p &copy; Idorenyin Udoh. All Rights Reserved.
+  p &copy; {{ date }} Idorenyin Udoh.
 </template>
+
+<script>
+export default {
+  computed: {
+    date() {
+      const date = new Date()
+      return date.getFullYear()
+    }
+  }
+}
+</script>
 
 <style scoped>
 footer {
