@@ -2,6 +2,7 @@
 div
   header
     h1 Idorenyin Udoh
+    hr
     p frontend developer &amp; technical writer
   section#about
     base-heading(position='left', heading='about me')
@@ -115,6 +116,17 @@ h1 {
   width: 90%;
 }
 
+hr {
+  border: none;
+  background-color: #000;
+  height: 2px;
+}
+
+header hr {
+  margin: 0;
+  width: 90%;
+}
+
 #about {
   margin-top: 13px;
   display: grid;
@@ -141,11 +153,8 @@ article:not(:last-child) {
   margin-bottom: calc(40px + 1vw);
 }
 
-hr {
+section hr {
   margin: calc(70px + 1vw) auto;
-  border: none;
-  background-color: #000;
-  height: 2px;
   width: 80%;
 }
 
