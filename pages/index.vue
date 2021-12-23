@@ -2,6 +2,7 @@
 div
   header
     h1 Idorenyin Udoh
+    hr
     p frontend developer &amp; technical writer
   section#about
     base-heading(position='left', heading='about me')
@@ -53,10 +54,7 @@ div
       | .
   section#contact
     base-heading(position='left', heading='contact')
-    contact-form
-    #socials
-      p: a(href='https://linkedin.com/in/idorenyinudoh', target='_blank') linkedin
-      p: a(href='https://github.com/idorenyinudoh', target='_blank') github
+    contact-section
   the-footer
 </template>
 
@@ -118,6 +116,17 @@ h1 {
   width: 90%;
 }
 
+hr {
+  border: none;
+  background-color: #000;
+  height: 2px;
+}
+
+header hr {
+  margin: 0;
+  width: 90%;
+}
+
 #about {
   margin-top: 13px;
   display: grid;
@@ -144,11 +153,8 @@ article:not(:last-child) {
   margin-bottom: calc(40px + 1vw);
 }
 
-hr {
+section hr {
   margin: calc(70px + 1vw) auto;
-  border: none;
-  background-color: #000;
-  height: 2px;
   width: 80%;
 }
 
@@ -171,12 +177,5 @@ h3 {
 .texts p,
 .texts a {
   font-size: 18px;
-}
-
-#socials {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  column-gap: calc(20px + 1vw);
-  justify-content: center;
 }
 </style>

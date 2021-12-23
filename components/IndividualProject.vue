@@ -217,6 +217,8 @@ header {
 h1 {
   margin: 0 0 20px 0;
   width: calc(90% - 40px);
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
 }
 
 main {
