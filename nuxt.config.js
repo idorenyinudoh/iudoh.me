@@ -42,13 +42,21 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxt/image'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/sitemap',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxt/image'
   ],
+
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/idorenyinudoh/image/upload/'
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
