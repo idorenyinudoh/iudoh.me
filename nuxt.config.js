@@ -30,7 +30,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/gtag.js'
+    '~/plugins/gtag.js',
+    '~/plugins/disqus'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,12 +43,21 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxt/image'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/content',
+    '@nuxt/image'
   ],
+
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/idorenyinudoh/image/upload/'
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
