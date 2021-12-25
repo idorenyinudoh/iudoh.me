@@ -23,6 +23,7 @@
     "core-js": "^3.20.1",
     "emailjs-com": "^3.2.0",
     "nuxt": "^2.13.3",
+    "vue-disqus": "^4.0.1",
     "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
