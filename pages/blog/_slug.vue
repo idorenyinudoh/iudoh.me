@@ -27,12 +27,22 @@ export default {
       article
     }
   },
-  head: {
-    link: [
-      {
-        rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-      }
-    ]
+  head() {
+    return {
+      title: `${this.article.title} | Idorenyin Udoh`,
+      link: [
+        {
+          rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+        }
+      ],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.article.description}`
+        }
+      ]
+    }
   },
   methods: {
     formatDate (date) {
