@@ -32,3 +32,20 @@ section {
 ul {
     font-weight: 300;
 }
+.nuxt-content img {
+    display: block;
+    margin: 40px auto;
+    max-width: 100%;
+}
+.nuxt-content h2 {
+    margin: 40px 0;
+    font-size: 32px;
+}
+.nuxt-content p {
+    margin: 20px 0;
+}
+@media screen and (min-width: 1024px) {
+    .nuxt-content {
+        padding: 0 calc(100px + 1vw);
+    }
+}
