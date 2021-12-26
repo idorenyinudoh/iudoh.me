@@ -8,7 +8,7 @@
       span {{ article.title }}
     h1 {{ article.title }}
     .date-tag
-      p {{ formatDate(article.createdAt) }}
+      p {{ formatDate(article.date) }}
       span •
       a(v-for="tag in article.tags" :href="`/blog/tag/${tag}`") {{ tag }}
     nuxt-content(:document="article")
