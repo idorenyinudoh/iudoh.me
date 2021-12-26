@@ -48,9 +48,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/sitemap',
     '@nuxt/content',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/sitemap'
   ],
 
   image: {
@@ -68,6 +68,9 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://iudoh.me'
+    hostname: 'https://iudoh.me',
+    routes: [
+      '/blog/my-2021-in-review'
+    ]
   }
 }
