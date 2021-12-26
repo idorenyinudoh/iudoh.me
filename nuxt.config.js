@@ -10,7 +10,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Frontend Developer and Technical Writer from Akwa Ibom, Nigeria.' },
       { name: 'author', content: 'Idorenyin Udoh' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'monetization', content: '$ilp.uphold.com/ynG6GXkiyNjM' }
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
