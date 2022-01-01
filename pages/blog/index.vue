@@ -2,7 +2,7 @@
   section.container
     article(v-for="article in articles")
       h2: a(:href="`blog/${article.slug}`") {{ article.title }}
-      p.date {{ formatDate(article.createdAt) }}
+      p.date {{ formatDate(article.date) }}
       p.desc {{ article.description }}
 </template>
 
@@ -10,12 +10,12 @@
 export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
-      .sortBy('createdAt', 'desc')
+      .sortBy('date', 'desc')
       .only([
         'title',
         'slug',
         'description',
-        'createdAt'
+        'date'
       ])
       .limit(5)
       .fetch()
