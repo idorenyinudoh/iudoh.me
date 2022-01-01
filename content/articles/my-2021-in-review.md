@@ -1,7 +1,6 @@
 ---
 title: My 2021 In Review
 description: My 2021 in a little bit more than a nutshell.
-date: 2021-12-24
 tags: [me]
 ---
 
