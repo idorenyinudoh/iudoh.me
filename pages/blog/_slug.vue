@@ -45,7 +45,7 @@ export default {
       script: [
         {
           type: 'application/ld+json',
-          innerHTML: {
+          innerHTML: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": this.article.title,
@@ -55,7 +55,7 @@ export default {
               "@type": "Person",
               "name": "Idorenyin Udoh"
             }]
-          }
+          })
         }
       ]
     }
