@@ -1,6 +1,7 @@
 ---
 title: My 2021 In Review
 description: My 2021 in a little bit more than a nutshell.
+image: https://res.cloudinary.com/idorenyinudoh/image/upload/v1640432159/blog/photo-of-me-looking-at-the-ocean.jpg
 date: 2021-12-24
 tags: [me]
 ---

@@ -41,6 +41,22 @@ export default {
           name: 'description',
           content: `${this.article.description}`
         }
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": this.article.title,
+            "image": this.article.image,
+            "datePublished": this.article.date,
+            "author": [{
+              "@type": "Person",
+              "name": "Idorenyin Udoh"
+            }]
+          }
+        }
       ]
     }
   },
