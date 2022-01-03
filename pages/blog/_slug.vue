@@ -53,7 +53,8 @@ export default {
             'datePublished': this.article.date,
             'author': [{
               '@type': 'Person',
-              'name': 'Idorenyin Udoh'
+              'name': 'Idorenyin Udoh',
+              'url': 'https://iudoh.me'
             }]
           }
         }
