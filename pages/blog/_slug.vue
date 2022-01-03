@@ -45,17 +45,17 @@ export default {
       script: [
         {
           type: 'application/ld+json',
-          innerHTML: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": this.article.title,
-            "image": this.article.image,
-            "datePublished": this.article.date,
-            "author": [{
-              "@type": "Person",
-              "name": "Idorenyin Udoh"
+          json: {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            'headline': this.article.title,
+            'image': this.article.image,
+            'datePublished': this.article.date,
+            'author': [{
+              '@type': 'Person',
+              'name': 'Idorenyin Udoh'
             }]
-          })
+          }
         }
       ]
     }
