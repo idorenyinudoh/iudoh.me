@@ -10,7 +10,7 @@ div
     p I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm proficient with Vue and Nuxt, I always work with Git, and my preferred template engine is Pug.
     p I often write concise technical articles when I learn new technologies as I want to give back to the community
       small  and make a few bucks.
-    p I'm currently interning as a Software Engineer at 
+    p I'm currently working as a Software Engineer at 
       a(href='https://acumen.digital/' target='_blank') Acumen Digital
       | .
   section#works
