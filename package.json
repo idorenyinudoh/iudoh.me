@@ -41,7 +41,7 @@
     "prettier": "^2.5.1",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
-    "stylelint": "^14.5.2",
+    "stylelint": "^14.5.3",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0"
   }
