@@ -20,7 +20,7 @@
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/vercel-builder": "^0.22.1",
-    "core-js": "^3.21.1",
+    "core-js": "^3.22.4",
     "emailjs-com": "^3.2.0",
     "nuxt": "^2.13.3",
     "vue-disqus": "^4.0.1",
