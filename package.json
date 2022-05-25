@@ -17,7 +17,7 @@
     "*.{css,vue}": "stylelint"
   },
   "dependencies": {
-    "@nuxt/content": "^1.15.1",
+    "@nuxt/content": "^2.0.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/vercel-builder": "^0.22.1",
     "core-js": "^3.22.4",
