@@ -22,7 +22,7 @@
     "@nuxtjs/vercel-builder": "^0.22.1",
     "core-js": "^3.22.4",
     "emailjs-com": "^3.2.0",
-    "nuxt": "^2.12.2",
+    "nuxt": "^3.2.2",
     "vue-disqus": "^4.0.1",
     "vue-gtag": "^1.16.1"
   },
