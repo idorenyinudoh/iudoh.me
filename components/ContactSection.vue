@@ -5,4 +5,15 @@ div
     | or  
     a(href='https://linkedin.com/in/idorenyinudoh', target='_blank') LinkedIn
     |  and I'll get back to you shooooortlyyy.
+  p There's also my 
+    a(href='https://medium.com/@idorenyinudoh10') Medium 
+    | and 
+    a(href='https://twitter.com/broods_') Twitter
+    | ? 
 </template>
+
+<style scoped>
+p {
+  margin: calc(10px + 1vw) 0;
+}
+</style>
