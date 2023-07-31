@@ -9,7 +9,6 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "prepare": "husky install",
     "lint": "npm run lint:js && npm run lint:style"
   },
   "lint-staged": {
@@ -17,9 +16,9 @@
     "*.{css,vue}": "stylelint"
   },
   "dependencies": {
-    "@nuxt/content": "^1.15.1",
+    "@nuxt/content": "^2.7.2",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/vercel-builder": "^0.22.1",
+    "@nuxtjs/vercel-builder": "^0.17.4",
     "core-js": "^3.22.4",
     "emailjs-com": "^3.2.0",
     "nuxt": "^2.12.2",

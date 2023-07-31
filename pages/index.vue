@@ -53,7 +53,10 @@ div
       nuxt-link(to='/articles') here
       | .
   section#contact
-    base-heading(position='left', heading='contact')
+    base-heading(position='left')
+      span find me
+      span &nbsp;
+      span  online
     contact-section
   the-footer
 </template>
@@ -135,6 +138,15 @@ header hr {
 
 small {
   font-size: 16px;
+}
+
+section#contact h2 {
+  padding-right: 0;
+}
+
+section#contact h2 span:last-of-type {
+  position: absolute;
+  z-index: 0;
 }
 
 section:not(:last-of-type) {
