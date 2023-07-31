@@ -1,5 +1,7 @@
 <template lang="pug">
-h2(:class='determinePosition') {{ heading }}
+h2(:class='determinePosition')
+  span(v-if="heading") {{ heading }}
+  slot(v-else)
 </template>
 
 <script>
@@ -11,7 +13,8 @@ export default {
     },
     heading: {
       type: String,
-      required: true,
+      required: false,
+      default: ''
     },
   },
   computed: {
