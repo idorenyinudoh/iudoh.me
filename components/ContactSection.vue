@@ -6,9 +6,13 @@ div
     a(href='https://linkedin.com/in/idorenyinudoh', target='_blank') LinkedIn
     |  and I'll get back to you shooooortlyyy.
   p There's also my 
-    a(href='https://medium.com/@idorenyinudoh10') Medium 
-    | and 
-    a(href='https://twitter.com/broods_') Twitter
+    a(href='https://codepen.io/idorenyinudoh', target='_blank') CodePen
+    |, 
+    a(href='https://github.com/idorenyinudoh', target='_blank') GitHub
+    | , 
+    a(href='https://medium.com/@idorenyinudoh10', target='_blank') Medium
+    |, and 
+    a(href='https://twitter.com/broods_', target='_blank') Twitter
     | ? 
 </template>
 
