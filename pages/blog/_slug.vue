@@ -12,8 +12,6 @@
       span •
       a(v-for="tag in article.tags" :href="`/blog/tag/${tag}`") {{ tag }}
     nuxt-content(:document="article")
-    .disqus
-      disqus
     hr
 </template>
 
@@ -89,10 +87,6 @@ export default {
 }
 .date-tag p {
   font-size: 20px;
-}
-.disqus {
-  margin: calc(50px + 1vw) 0;
-  padding: 0 calc(30px + 1vw);
 }
 hr {
   width: 100%;
