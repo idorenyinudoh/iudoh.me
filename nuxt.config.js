@@ -1,4 +1,4 @@
-export default {
+export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Idorenyin Udoh - Frontend Developer & Technical Writer',
@@ -26,7 +26,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/static/index.css'
+    '~/public/index.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -34,24 +34,13 @@ export default {
     '~/plugins/gtag.js',
     '~/plugins/disqus'
   ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-    '@nuxt/image'
-  ],
-
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxt/content',
     '@nuxt/image',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module'
   ],
 
   image: {
@@ -67,11 +56,4 @@ export default {
   publicRuntimeConfig: {
     googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
   },
-
-  sitemap: {
-    hostname: 'https://iudoh.me',
-    routes: [
-      '/blog/my-2021-in-review'
-    ]
-  }
-}
+})
