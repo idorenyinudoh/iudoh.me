@@ -1,6 +1,6 @@
 <template lang="pug">
 div
   the-nav
-  nuxt
+  slot
   the-footer
 </template>
