@@ -11,7 +11,7 @@ const props = {
     "Secondly, the webmasters of these sites ensure they tag the audio files' album covers and metadata with images and text advertising the websites.",
     'Finally, more often than not, still on the topic of advertising, these webmasters add voiceovers of their URLs to the audio files. For example, if Google were one of these sites, while listening to a song, you\'ll hear something like "Get more music at google.com" or "It\'s another hit jam from google.com".',
     'To me, this method of advertising was a form of copyright infringement. Consequently, I came up with a project idea to build a website for music streaming and download but with the actual album covers and metadata on the audio files as released by the artistes.',
-    'Months later, I read an <a href="https://iptlc.org.ng/%EF%BB%BFimplications-of-illegal-downloading-of-copyrighted-music-in-nigeria-ip-perspective-introduction/", target="_blank">article</a> that explained that even this project was a form of copyright infringement. Therefore, I had to discontinue the project development.',
+    'Months later, I read an <a href="https://iptlc.org.ng/implications-of-illegal-downloading-of-copyrighted-music-in-nigeria-ip-perspective-introduction/", target="_blank">article</a> (the link is broken now but it worked before, i promise) that explained that even this project was a form of copyright infringement. Therefore, I had to discontinue the project development.',
   ],
   screenshot2src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-artistes-page-screenshot.png',
   alt2: 'undiluted music artistes page screenshot',
