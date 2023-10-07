@@ -1,13 +1,8 @@
-<template lang="pug">
-individual-project(v-bind='props')
-</template>
-
-<script>
+<script setup lang="ts">
 const props = {
   name: 'undiluted music',
   summary: 'a website that gives users access to stream and download songs.',
-  screenshot1src:
-    'https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png',
+  screenshot1src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1624204806/portfolio/undiluted-music-landing-page-screenshot.png',
   alt1: 'undiluted music landing page screenshot',
   purposes: [
     'A little backstory before I proceed.',
@@ -18,8 +13,7 @@ const props = {
     'To me, this method of advertising was a form of copyright infringement. Consequently, I came up with a project idea to build a website for music streaming and download but with the actual album covers and metadata on the audio files as released by the artistes.',
     'Months later, I read an <a href="https://iptlc.org.ng/%EF%BB%BFimplications-of-illegal-downloading-of-copyrighted-music-in-nigeria-ip-perspective-introduction/", target="_blank">article</a> that explained that even this project was a form of copyright infringement. Therefore, I had to discontinue the project development.',
   ],
-  screenshot2src:
-    'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-artistes-page-screenshot.png',
+  screenshot2src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-artistes-page-screenshot.png',
   alt2: 'undiluted music artistes page screenshot',
   stacks: [
     'I started out the development with HTML, CSS, and Vanilla JavaScript.',
@@ -31,11 +25,9 @@ const props = {
     "However, the major challenge I had was building a cross-browser compatible audio player. I wanted my audio player to have the same look and functionality across browsers. Therefore, using the default audio player wasn't an option.",
     'I solved this challenge by creating an audio player from scratch in a <a href="https://github.com/idorenyinudoh/my-audio-player" target="_blank">different repository</a>. I used the HTMLAudioElement API for the entire functionality of the player and a Lottie animated icon from Icons8 for the play / pause transition.',
   ],
-  screenshot3src:
-    'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-mi-abaga-page-screenshot.png',
+  screenshot3src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-mi-abaga-page-screenshot.png',
   alt3: 'undiluted music mi abaga page screenshot',
-  screenshot4src:
-    'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-rendezvous-page-screenshot.png',
+  screenshot4src: 'https://res.cloudinary.com/idorenyinudoh/image/upload/v1627136524/portfolio/undiluted-music-rendezvous-page-screenshot.png',
   alt4: 'undiluted music rendezvous page screenshot',
   lessons: [
     'Among the numerous things I learned while developing undiluted music, there were two major ones.',
@@ -45,12 +37,8 @@ const props = {
   repo: 'https://github.com/idorenyinudoh/undiluted-music2',
   url: 'https://idorenyinudoh.github.io/undiluted-music2/',
 }
-
-export default {
-  data() {
-    return {
-      props
-    }
-  }
-}
 </script>
+
+<template>
+  <TheProject :="props" />
+</template>

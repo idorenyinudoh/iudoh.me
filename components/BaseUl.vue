@@ -1,6 +1,7 @@
-<template lang="pug">
-ul
-  slot
+<template>
+  <ul>
+    <slot />
+  </ul>
 </template>
 
 <style scoped>
