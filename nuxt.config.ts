@@ -2,5 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ['nuxt-gtag']
+  modules: ['nuxt-gtag', 'nuxt-simple-sitemap'],
+  site: {
+    url: 'https://iudoh.me',
+  },
 })
