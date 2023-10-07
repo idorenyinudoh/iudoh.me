@@ -1,47 +1,20 @@
 {
-  "name": "iudoh.me",
-  "version": "1.0.0",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint": "npm run lint:js && npm run lint:style"
-  },
-  "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
-  },
-  "dependencies": {
-    "@nuxt/content": "^2.7.2",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/vercel-builder": "^0.17.4",
-    "core-js": "^3.22.4",
-    "emailjs-com": "^3.2.0",
-    "nuxt": "^2.12.2",
-    "vue-disqus": "^4.0.1",
-    "vue-gtag": "^1.16.1"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
-    "@nuxt/image": "^0.6.2",
-    "@nuxtjs/eslint-config": "^10.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
-    "@nuxtjs/stylelint-module": "^4.1.0",
-    "eslint": "^8.15.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-nuxt": "^3.2.0",
-    "eslint-plugin-vue": "^8.7.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0",
-    "stylelint": "^14.8.2",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^25.0.0"
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.4",
+    "nuxt-gtag": "^1.1.1",
+    "nuxt-simple-sitemap": "^3.4.0",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   }
 }
