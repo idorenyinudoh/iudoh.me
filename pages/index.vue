@@ -36,7 +36,6 @@ useSeoMeta({
       <p>I'm a Frontend Engineer and Technical Writer based in Lagos, Nigeria.</p>
       <p>I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm proficient with Vue and Nuxt, I always work with Git, and my preferred template engine is Pug.</p>
       <p>I often write concise technical articles when I learn new technologies as I want to give back to the community<small> and make a few bucks.</small></p>
-      <p>I'm currently working as a Software Engineer at <a href="https://acumen.digital/" target="_blank">Acumen Digital</a>.</p>
     </section>
     <section id="works">
       <BaseHeading position="right" heading="my works" />
