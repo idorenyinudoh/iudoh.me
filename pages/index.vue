@@ -1,15 +1,4 @@
 <script setup lang="ts">
-const route = useRoute()
-
-useHead({
-  meta: [
-    {
-      name: 'keywords',
-      content: 'frontend developer, frontend engineer, technical writer, frontend developer in nigeria, frontend engineer in nigeria, technical writer in nigeria, vue developer, nuxt developer'
-    }
-  ]
-})
-
 useSeoMeta({
   title: 'Idorenyin Udoh | frontend engineer & technical writer',
   ogTitle: 'Idorenyin Udoh | frontend engineer & technical writer',
@@ -20,7 +9,7 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/idorenyinudoh/image/upload/portfolio/home-hero.png',
   twitterImage: 'https://res.cloudinary.com/idorenyinudoh/image/upload/portfolio/home-hero.png',
   twitterCard: 'summary_large_image',
-  ogUrl: `https://iudoh.me${route.path}`,
+  ogUrl: `https://iudoh.me`,
 })
 </script>
 
@@ -36,7 +25,6 @@ useSeoMeta({
       <p>I'm a Frontend Engineer and Technical Writer based in Lagos, Nigeria.</p>
       <p>I replicate UI designs to pixel-perfect webpages with HTML, CSS, and JavaScript. I'm proficient with Vue and Nuxt, I always work with Git, and my preferred template engine is Pug.</p>
       <p>I often write concise technical articles when I learn new technologies as I want to give back to the community<small> and make a few bucks.</small></p>
-      <p>I'm currently working as a Software Engineer at <a href="https://acumen.digital/" target="_blank">Acumen Digital</a>.</p>
     </section>
     <section id="works">
       <BaseHeading position="right" heading="my works" />

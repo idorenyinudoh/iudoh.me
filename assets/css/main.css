@@ -26,7 +26,6 @@ h1 {
 section {
   position: relative;
   border-top: 2px solid;
-  border-bottom: 2px solid;
   padding: calc(40px + 1vw) calc(30px + 1vw);
 }
 ul {
