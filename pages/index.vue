@@ -1,15 +1,4 @@
 <script setup lang="ts">
-const route = useRoute()
-
-useHead({
-  meta: [
-    {
-      name: 'keywords',
-      content: 'frontend developer, frontend engineer, technical writer, frontend developer in nigeria, frontend engineer in nigeria, technical writer in nigeria, vue developer, nuxt developer'
-    }
-  ]
-})
-
 useSeoMeta({
   title: 'Idorenyin Udoh | frontend engineer & technical writer',
   ogTitle: 'Idorenyin Udoh | frontend engineer & technical writer',
@@ -20,7 +9,7 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/idorenyinudoh/image/upload/portfolio/home-hero.png',
   twitterImage: 'https://res.cloudinary.com/idorenyinudoh/image/upload/portfolio/home-hero.png',
   twitterCard: 'summary_large_image',
-  ogUrl: `https://iudoh.me${route.path}`,
+  ogUrl: `https://iudoh.me`,
 })
 </script>
 

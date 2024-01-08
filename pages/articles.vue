@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const route = useRoute()
-
 const articles = [
   {
     title: 'Give Users Control: The Media Session API',
@@ -98,7 +96,7 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/idorenyinudoh/image/upload/portfolio/home-hero.png',
   twitterImage: 'https://res.cloudinary.com/idorenyinudoh/image/upload/portfolio/home-hero.png',
   twitterCard: 'summary_large_image',
-  ogUrl: `https://iudoh.me${route.path}`,
+  ogUrl: `https://iudoh.me/articles`,
 })
 </script>
 
