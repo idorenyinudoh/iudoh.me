@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.7.4",
+    "nuxt": "^3.11.2",
     "nuxt-gtag": "^1.1.1",
     "nuxt-simple-sitemap": "^3.4.0",
     "vue": "^3.3.4",
