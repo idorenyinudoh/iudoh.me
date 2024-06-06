@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['nuxt-gtag', '@nuxtjs/tailwindcss']
+  modules: ['nuxt-gtag', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  colorMode: {
+    classSuffix: ''
+  }
 })
