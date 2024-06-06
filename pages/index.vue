@@ -14,5 +14,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <h1>Idorenyin Udoh</h1>
+  <h1 class="text-5xl">Idorenyin Udoh</h1>
 </template>
