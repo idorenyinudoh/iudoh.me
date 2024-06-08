@@ -70,3 +70,9 @@
     font-family: 'Geist', system-ui, sans-serif;
   }
 }
+
+@layer components {
+  .text {
+    @apply text-[#1A1A1A] dark:text-white tracking-tighter;
+  }
+}

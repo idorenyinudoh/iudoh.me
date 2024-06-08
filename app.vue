@@ -28,5 +28,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <h1 class="text-[80px] leading-[110%] font-medium text-[#1A1A1A] tracking-tighter">Text goes here. Text goes here. Text goes here. Text goes here. Text goes here.</h1>
+  <div class="px-12 pb-12 pt-8 w-full h-full bg-white dark:bg-[#1A1A1A]">
+    <TheNav />
+    <h1 class="text text-[80px] leading-[110%] font-medium">Text goes here. Text goes here. Text goes here. Text goes here. Text goes here.</h1>
+  </div>
 </template>
