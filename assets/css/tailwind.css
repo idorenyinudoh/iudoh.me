@@ -76,3 +76,7 @@
     @apply text-[#1A1A1A] dark:text-white tracking-tighter;
   }
 }
+
+body * {
+  @apply transition-colors duration-200 ease-linear;
+}
