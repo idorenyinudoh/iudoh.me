@@ -62,9 +62,9 @@ const recentWorks = [
 </script>
 
 <template>
-  <div class="px-12 pb-12 pt-8 w-full h-screen bg-white dark:bg-[#1A1A1A]">
+  <div class="px-12 pb-12 pt-8 w-full h-screen flex flex-col bg-white dark:bg-[#1A1A1A]">
     <TheNav />
-    <main class="px-20 pt-24 pb-8 bg-[#F5F5F5] dark:bg-[#242424] rounded-3xl">
+    <main class="flex-grow pl-20 pr-8 pt-24 pb-8 rounded-3xl flex flex-col bg-[#F5F5F5] dark:bg-[#242424]">
       <p class="text text-2xl font-normal tracking-tight">I'm Idorenyin</p>
       <h1 class="w-[84%] mt-4 mb-20 text text-[80px] leading-[110%] font-medium">Crafting engaging interfaces and concise documentation, ensuring seamless digital solutions.</h1>
       <div class="flex gap-x-14">
@@ -95,6 +95,7 @@ const recentWorks = [
           </div>
         </section>
       </div>
+      <NowPlaying />
     </main>
   </div>
 </template>

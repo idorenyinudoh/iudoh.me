@@ -4,5 +4,13 @@ export default defineNuxtConfig({
   modules: ['nuxt-gtag', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
   colorMode: {
     classSuffix: ''
+  },
+  runtimeConfig: {
+    public: {
+      airtableAPIKey: process.env.AIRTABLE_API_KEY,
+      airtableBase: process.env.AIRTABLE_BASE,
+      spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
+      spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    }
   }
 })
