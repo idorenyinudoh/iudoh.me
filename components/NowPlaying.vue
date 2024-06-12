@@ -99,18 +99,20 @@ const getCurrentPlayingTrack = async (token: string) => {
   const data = await response.json()
 
   if (data && data.error === undefined) {
-    trackData.value = {
-      name: data.item.name,
-      url: data.item.external_urls.spotify,
-      time: 0
-    }
-
     if (data.is_playing) {
+      trackData.value = {
+        name: data.item.name,
+        url: data.item.external_urls.spotify,
+        time: 0
+      }
+
       setTimeout(() => {
         getCurrentPlayingTrack(token).catch(() => {
           getRecentlyPlayedTracks(token)
         })
       }, data.item.duration_ms - data.progress_ms)
+    } else {
+      getRecentlyPlayedTracks(token)
     }
   }
 
