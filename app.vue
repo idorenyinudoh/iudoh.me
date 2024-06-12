@@ -28,7 +28,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="px-6 md:px-8 lg:px-12 pb-12 pt-8 w-full h-screen flex flex-col bg-white dark:bg-[#1A1A1A]">
+  <div class="px-6 md:px-8 lg:px-12 pb-12 pt-8 w-full min-h-screen flex flex-col bg-white dark:bg-[#1A1A1A]">
     <TheNav />
     <TheMain />
   </div>

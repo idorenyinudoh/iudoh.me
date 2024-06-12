@@ -233,13 +233,13 @@ const trackData = ref({
 </script>
 
 <template>
-  <section class="mt-auto ml-auto">
-    <div class="py-2 pl-2.5 pr-8 rounded-[48px] flex gap-x-3 items-center bg-white dark:bg-[#3E3E3E]">
-      <img src="~/assets/images/spotify.svg" alt="spotify logo">
-      <div class="flex flex-col">
-        <h2 class="text-base text-[#666666] dark:text-[#ADA5A5] font-medium tracking-tighter">{{ trackData.time ? 'Listened' : 'Listening' }} to</h2>
+  <section class="mt-auto md:ml-auto max-w-max">
+    <div class="py-1.5 lg:py-2 pl-2 lg:pl-2.5 pr-7 lg:pr-8 rounded-[48px] flex gap-x-2 lg:gap-x-3 items-center bg-white dark:bg-[#3E3E3E]">
+      <img src="~/assets/images/spotify.svg" alt="spotify logo" class="w-14 h-14">
+      <div class="flex flex-col max-sm:gap-y-0.5">
+        <h2 class="text-xs sm:text-sm lg:text-base text-[#666666] dark:text-[#ADA5A5] font-medium tracking-tighter">{{ trackData.time ? 'Listened' : 'Listening' }} to</h2>
         <NuxtLink :to="trackData.url" target="_blank">
-          <p class="-mt-0.5 text text-xl font-medium">{{ trackData.name }}</p>
+          <p class="-mt-0.5 text text-sm sm:text-base lg:text-xl font-medium">{{ trackData.name }}</p>
         </NuxtLink>
       </div>
     </div>
