@@ -75,6 +75,9 @@
   .text {
     @apply text-[#1A1A1A] dark:text-white tracking-tighter;
   }
+  .link {
+    @apply relative before:absolute before:bottom-[1px] before:left-0 before:w-full before:h-[1px] before:bg-[#1A1A1A] before:dark:bg-white before:scale-x-0 before:origin-[100%] hover:before:scale-x-100 hover:before:origin-[0] before:transition-transform before:duration-500 before:ease-linear hover:before:ease-in-out;
+  }
 }
 
 body * {

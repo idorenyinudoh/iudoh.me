@@ -13,7 +13,7 @@ const changeColorMode = () => {
         <img src="~/assets/icons/star-of-life.svg" alt="star of life" class="max-lg:w-5 max-lg:h-5">
         <span class="text text-xl lg:text-2xl font-normal">Agent 48</span>
       </p>
-      <p class="text text-xl lg:text-2xl font-normal">Frontend engineer</p>
+      <p class="text text-xl lg:text-2xl font-normal">Idorenyin Udoh</p>
     </div>
     <ColorScheme placeholder="" tag="div">
       <button class="border border-solid border-[#EFEFEF] dark:border-[#434343] rounded-[32px] md:px-1.5 lg:px-2 xl:px-2.5 md:py-1 lg:py-1.5 xl:py-2 grid grid-cols-1 md:grid-cols-2 bg-[#F9F9F9] dark:bg-[#505050] md:hover:brightness-95 md:dark:hover:brightness-75 transition-all duration-200 ease-linear" @click="changeColorMode">
