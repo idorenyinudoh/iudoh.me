@@ -1,4 +1,12 @@
 <script setup lang="ts">
+const activeHeaderIndex = ref(0)
+
+onMounted(() => {
+  setInterval(() => {
+    activeHeaderIndex.value = activeHeaderIndex.value >= 6 ? 0 : ++activeHeaderIndex.value
+  }, 10000)
+})
+
 const socials = [
   {
     url: 'https://x.com/broods_',
@@ -36,7 +44,15 @@ const recentWorks = [
 
 <template>
   <main class="flex-grow pl-6 sm:pl-7 md:pl-14 lg:pl-20 pr-6 sm:pr-7 md:pr-8 pt-9 sm:pt-10 md:pt-16 lg:pt-24 pb-7 sm:pb-8 rounded-xl md:rounded-2xl lg:rounded-3xl flex flex-col bg-[#F5F5F5] dark:bg-[#242424]">
-    <p class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Frontend engineer</p>
+    <Transition name="fade" mode="out-in" :duration="{ enter: 700, leave: 500 }">
+      <p v-if="activeHeaderIndex === 0" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Frontend engineer</p>
+      <p v-else-if="activeHeaderIndex === 1" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Technical writer</p>
+      <p v-else-if="activeHeaderIndex === 2" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Hip-hop fan</p>
+      <p v-else-if="activeHeaderIndex === 3" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Open-source enthusiast</p>
+      <p v-else-if="activeHeaderIndex === 4" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Dashboard aficionado</p>
+      <p v-else-if="activeHeaderIndex === 5" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter"><NuxtLink to="https://adura.design" target="_blank" class="link">Adura</NuxtLink>'s other half</p>
+      <p v-else-if="activeHeaderIndex === 6" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Calisthenics fanatic</p>
+    </Transition>
     <h1 class="w-[90%] sm:w-[84%] mt-4 mb-20 text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] xl:leading-[110%] font-medium">Crafting engaging interfaces and concise documentation, ensuring seamless digital solutions.</h1>
     <div class="mb-28 flex flex-col md:flex-wrap md:flex-row gap-x-16 lg:gap-x-20 gap-y-12">
       <section class="flex flex-col gap-y-1.5 lg:gap-y-2">

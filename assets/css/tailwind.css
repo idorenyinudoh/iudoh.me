@@ -83,3 +83,13 @@
 body * {
   @apply transition-colors duration-200 ease-linear;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s linear;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

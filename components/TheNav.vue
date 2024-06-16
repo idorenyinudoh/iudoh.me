@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const agentIsHoveredOn = ref(false)
+
 const colorMode = useColorMode()
 
 const changeColorMode = () => {
@@ -9,11 +11,14 @@ const changeColorMode = () => {
 <template>
   <nav class="mb-7 lg:mb-6 flex justify-between items-center">
     <div class="flex-grow flex gap-x-[13.33%] items-center">
-      <p class="hidden md:flex gap-x-2 items-center">
-        <img src="~/assets/icons/star-of-life.svg" alt="star of life" class="max-lg:w-5 max-lg:h-5">
+      <button class="hidden md:flex relative gap-x-2 items-center" @mouseover="agentIsHoveredOn = true" @mouseleave="agentIsHoveredOn = false">
+        <img src="~/assets/icons/star-of-life.svg" alt="star of life" class="max-lg:w-5 max-lg:h-5 rotate">
         <span class="text text-xl lg:text-2xl font-normal">Agent 48</span>
-      </p>
-      <p class="text text-xl lg:text-2xl font-normal">Idorenyin Udoh</p>
+      </button>
+      <Transition name="fade" mode="out-in" :duration="{ enter: 600, leave: 400 }">
+        <p v-if="agentIsHoveredOn" class="text text-xl lg:text-2xl font-normal">What my friends call me — there's a backstory 😉</p>
+        <p v-else class="text text-xl lg:text-2xl font-normal">Idorenyin Udoh</p>
+      </Transition>
     </div>
     <ColorScheme placeholder="" tag="div">
       <button class="border border-solid border-[#EFEFEF] dark:border-[#434343] rounded-[32px] md:px-1.5 lg:px-2 xl:px-2.5 md:py-1 lg:py-1.5 xl:py-2 grid grid-cols-1 md:grid-cols-2 bg-[#F9F9F9] dark:bg-[#505050] md:hover:brightness-95 md:dark:hover:brightness-75 transition-all duration-200 ease-linear" @click="changeColorMode">
@@ -25,3 +30,25 @@ const changeColorMode = () => {
     </ColorScheme>
   </nav>
 </template>
+
+<style scoped>
+.rotate {
+  animation: rotate 7s linear infinite forwards;
+}
+
+button:hover .rotate {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
