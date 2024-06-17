@@ -141,6 +141,11 @@ const getRecentlyPlayedTracks = async (token: string) => {
 
   trackDataHasLoaded.value = true
 
+  lastListened.value = calculateLastListened()
+  setInterval(() => {
+    lastListened.value = calculateLastListened()
+  }, 60000)
+
   return data
 }
 
@@ -151,10 +156,11 @@ const trackData = ref({
 })
 
 const playerIsActive = computed(() => trackData.value.time === '')
+const lastListened = ref('')
 
-const lastListened = computed(() => {
+const calculateLastListened = () => {
   if (trackData.value.time === '') {
-    return
+    return ''
   }
 
   const rn = new Date().getTime()
@@ -162,30 +168,30 @@ const lastListened = computed(() => {
 
   const milliseconds = rn - lastPlayed
 
-  const seconds = Math.floor(milliseconds / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-  const weeks = Math.floor(days / 7);
-  const months = Math.floor(days / 30); // Approximating 1 month as 30 days
-  const years = Math.floor(days / 365); // Approximating 1 year as 365 days
+  const seconds = Math.floor(milliseconds / 1000)
+  const minutes = Math.floor(seconds / 60)
+  const hours = Math.floor(minutes / 60)
+  const days = Math.floor(hours / 24)
+  const weeks = Math.floor(days / 7)
+  const months = Math.floor(days / 30)
+  const years = Math.floor(days / 365)
 
   if (seconds < 60) {
-    return `${seconds}s ago`;
+    return `${seconds}s ago`
   } else if (minutes < 60) {
-    return `${minutes}m ago`;
+    return `${minutes}m ago`
   } else if (hours < 24) {
-    return `${hours}h ago`;
+    return `${hours}h ago`
   } else if (days < 7) {
-    return `${days}d ago`;
+    return `${days}d ago`
   } else if (weeks < 4) {
-    return `${weeks}w ago`;
+    return `${weeks}w ago`
   } else if (months < 12) {
-    return `${months}mo ago`;
+    return `${months}mo ago`
   } else {
-    return `${years}y ago`;
+    return `${years}y ago`
   }
-})
+}
 
 // function to generate code verifier for spotify user auth request
 
