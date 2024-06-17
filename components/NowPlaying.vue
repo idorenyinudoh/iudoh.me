@@ -42,6 +42,8 @@ airtableBase('spotify').select({
   }
 })
 
+const trackDataHasLoaded = ref(false)
+
 const checkTokenValidity = (created: number, expiry: number) => {
   const currentDate = new Date()
   const expiryDate = new Date(expiry + created)
@@ -103,8 +105,10 @@ const getCurrentPlayingTrack = async (token: string) => {
       trackData.value = {
         name: data.item.name,
         url: data.item.external_urls.spotify,
-        time: 0
+        time: ''
       }
+
+      trackDataHasLoaded.value = true
 
       setTimeout(() => {
         getCurrentPlayingTrack(token).catch(() => {
@@ -135,13 +139,52 @@ const getRecentlyPlayedTracks = async (token: string) => {
     time: data.items[0].played_at
   }
 
+  trackDataHasLoaded.value = true
+
   return data
 }
 
 const trackData = ref({
   name: '',
   url: '',
-  time: 0
+  time: ''
+})
+
+const playerIsActive = computed(() => trackData.value.time === '')
+
+const lastListened = computed(() => {
+  if (trackData.value.time === '') {
+    return
+  }
+
+  const rn = new Date().getTime()
+  const lastPlayed = new Date(trackData.value.time).getTime()
+
+  const milliseconds = rn - lastPlayed
+
+  const seconds = Math.floor(milliseconds / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const weeks = Math.floor(days / 7);
+  const months = Math.floor(days / 30); // Approximating 1 month as 30 days
+  const years = Math.floor(days / 365); // Approximating 1 year as 365 days
+
+  if (seconds < 60) {
+    return `${seconds}s ago`;
+  } else if (minutes < 60) {
+    return `${minutes}m ago`;
+  } else if (hours < 24) {
+    return `${hours}h ago`;
+  } else if (days < 7) {
+    return `${days}d ago`;
+  } else if (weeks < 4) {
+    return `${weeks}w ago`;
+  } else if (months < 12) {
+    return `${months}mo ago`;
+  } else {
+    return `${years}y ago`;
+  }
 })
 
 // function to generate code verifier for spotify user auth request
@@ -234,14 +277,54 @@ const trackData = ref({
 
 <template>
   <section class="mt-auto md:ml-auto max-w-max">
-    <div class="py-1.5 lg:py-2 pl-2 lg:pl-2.5 pr-7 lg:pr-8 rounded-[48px] flex gap-x-2 lg:gap-x-3 items-center bg-white dark:bg-[#3E3E3E]">
-      <img src="~/assets/images/spotify.svg" alt="spotify logo" class="w-14 h-14">
-      <div class="flex flex-col max-sm:gap-y-0.5">
-        <h2 class="text-xs sm:text-sm lg:text-base text-[#666666] dark:text-[#ADA5A5] font-medium tracking-tighter">{{ trackData.time ? 'Listened' : 'Listening' }} to</h2>
-        <NuxtLink :to="trackData.url" target="_blank" class="link">
-          <p class="-mt-0.5 text text-sm sm:text-base lg:text-xl font-medium">{{ trackData.name }}</p>
-        </NuxtLink>
+    <Transition name="fade" mode="out-in" :duration="{ enter: 700, leave: 500 }">
+      <div v-if="trackDataHasLoaded" :class="['py-1.5 lg:py-2 pl-2 lg:pl-2.5 pr-7 lg:pr-8 rounded-[48px] flex gap-x-2 lg:gap-x-3 items-center bg-white dark:bg-[#3E3E3E]', playerIsActive ? 'outline outline-2 outline-[#EEEEEE] dark:outline-[#4D4D4D] animate-[ping_4s_linear_infinite_forwards] dark:animate-[dark-ping_4s_linear_infinite_forwards]' : 'border border-solid border-[#EEEEEE] dark:border-[#4D4D4D]']">
+        <img src="~/assets/images/spotify.svg" alt="spotify logo" class="w-14 h-14">
+        <div class="flex flex-col max-sm:gap-y-0.5">
+          <div class="flex gap-x-1.5 lg:gap-x-2 items-center">
+            <h2 class="text-xs sm:text-sm lg:text-base text-[#666666] dark:text-[#ADA5A5] font-medium tracking-tighter">{{ playerIsActive ? 'Listening' : 'Listened' }} to</h2>
+            <template v-if="!playerIsActive">
+              <span class="text-[#666666]/80 dark:text-[#ADA5A5]/80">&centerdot;</span>
+              <p class="text-xs lg:text-sm text-[#666666]/80 dark:text-[#ADA5A5]/80 font-normal tracking-tighter">{{ lastListened }}</p>
+            </template>
+          </div>
+          <NuxtLink :to="trackData.url" target="_blank" class="link max-w-max">
+            <p class="-mt-0.5 text text-sm sm:text-base lg:text-xl font-medium">{{ trackData.name }}</p>
+          </NuxtLink>
+        </div>
       </div>
-    </div>
+    </Transition>
   </section>
 </template>
+
+<style>
+@keyframes ping {
+  0% {
+    outline-color: #FFF;
+  }
+  33% {
+    outline-color: #F5F5F5;
+  }
+  67% {
+    outline-color: #EEEEEE;
+  }
+  100% {
+    outline-color: #FFF;
+  }
+}
+
+@keyframes dark-ping {
+  0% {
+    outline-color: #3E3E3E;
+  }
+  33% {
+    outline-color: #242424;
+  }
+  67% {
+    outline-color: #4D4D4D;
+  }
+  100% {
+    outline-color: #3E3E3E;
+  }
+}
+</style>
