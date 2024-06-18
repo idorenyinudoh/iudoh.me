@@ -23,6 +23,10 @@ const socials = [
   {
     url: 'https://github.com/idorenyinudoh',
     title: 'GitHub'
+  },
+  {
+    url: 'mailto:idorenyinudoh10@outlook.com',
+    title: 'Mail'
   }
 ]
 
