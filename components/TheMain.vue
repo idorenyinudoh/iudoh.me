@@ -33,7 +33,7 @@ const recentWorks = [
   },
   {
     image: 'residentes-en-revision-favicon.png',
-    url: 'https://residentesenrevision.com/'
+    url: 'https://www.residentesenrevision.com/'
   },
   {
     image: 'tanwa-favicon.png',
