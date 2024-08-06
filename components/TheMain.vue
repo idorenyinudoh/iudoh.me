@@ -3,7 +3,7 @@ const activeHeaderIndex = ref(0)
 
 onMounted(() => {
   setInterval(() => {
-    activeHeaderIndex.value = activeHeaderIndex.value >= 6 ? 0 : ++activeHeaderIndex.value
+    activeHeaderIndex.value = activeHeaderIndex.value >= 7 ? 0 : ++activeHeaderIndex.value
   }, 10000)
 })
 
@@ -56,6 +56,7 @@ const recentWorks = [
       <p v-else-if="activeHeaderIndex === 4" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Dashboard aficionado</p>
       <p v-else-if="activeHeaderIndex === 5" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter"><NuxtLink to="https://adura.design" target="_blank" class="link">Adura</NuxtLink>'s other half</p>
       <p v-else-if="activeHeaderIndex === 6" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Calisthenics fanatic</p>
+      <p v-else-if="activeHeaderIndex === 7" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Web3 enthusiast</p>
     </Transition>
     <h1 class="w-[90%] sm:w-[84%] mt-4 mb-20 text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] xl:leading-[110%] font-medium">Crafting engaging interfaces and concise documentation, ensuring seamless digital solutions.</h1>
     <div class="mb-28 flex flex-col md:flex-wrap md:flex-row gap-x-16 lg:gap-x-20 gap-y-12">
