@@ -32,6 +32,10 @@ const socials = [
 
 const recentWorks = [
   {
+    image: 'david-blackmoore-favicon.png',
+    url: 'https://davidblackmooreonline.com/'
+  },
+  {
     image: 'aduragbemi-abiola-portfolio-favicon.png',
     url: 'https://adura.design/'
   },
