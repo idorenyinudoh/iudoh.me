@@ -32,6 +32,10 @@ const socials = [
 
 const recentWorks = [
   {
+    image: 'workflow-architects-favicon.png',
+    url: 'https://workflowarchitects.io/'
+  },
+  {
     image: 'david-blackmoore-favicon.png',
     url: 'https://davidblackmooreonline.com/'
   },
@@ -41,7 +45,7 @@ const recentWorks = [
   },
   {
     image: 'residentes-en-revision-favicon.png',
-    url: 'https://www.residentesenrevision.com/'
+    url: 'https://main.dxfansb9e0y0e.amplifyapp.com/'
   },
   {
     image: 'tanwa-favicon.png',
@@ -84,7 +88,7 @@ const recentWorks = [
       </section>
       <section class="flex flex-col gap-y-1.5 md:gap-y-2">
         <h2 class="text-lg md:text-xl font-medium text-[#666666] dark:text-[#D1D1D1] tracking-tighter">Recent works</h2>
-        <div class="flex gap-x-3 lg:gap-x-2.5 items-center">
+        <div class="flex flex-wrap gap-3 lg:gap-2.5 items-center">
           <NuxtLink v-for="(work, index) in recentWorks" :key="index" :to="work.url" target="_blank" class="hover:brightness-90 dark:hover:brightness-75 transition-all duration-200 ease-linear">
             <img :src="`/images/${work.image}`" alt="" class="w-14 lg:w-12 h-14 lg:h-12 rounded-full">
           </NuxtLink>

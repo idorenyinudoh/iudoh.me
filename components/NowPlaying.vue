@@ -70,7 +70,7 @@ const refreshAccessToken = async (refresh_token: string) => {
 
   const data = await response.json()
 
-  await updateAirtable(data.access_token, data.refresh_token, data.expiry * 1000)
+  await updateAirtable(data.access_token, data.refresh_token, data.expires_in * 1000)
   await getCurrentPlayingTrack(data.access_token).catch(() => {
     getRecentlyPlayedTracks(data.access_token)
   })
