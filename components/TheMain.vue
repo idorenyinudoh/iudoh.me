@@ -49,7 +49,7 @@ const recentWorks = [
   },
   {
     image: 'tanwa-favicon.png',
-    url: 'https://tanwa.app/'
+    url: 'https://www.tanwa.app/'
   }
 ]
 </script>
