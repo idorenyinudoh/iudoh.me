@@ -17,10 +17,10 @@ airtableBase('spotify').select({
         recordId.value = record.id
         const token: string = record.fields.token as string
         const refresh: string = record.fields.refresh as string
-        const expiry: number = record.fields.expiry as number
+        // const expiry: number = record.fields.expiry as number
         const created: number = record.fields.created as number
         
-        const tokenIsValid = checkTokenValidity(created, expiry)
+        const tokenIsValid = checkTokenValidity(created)
 
         if (tokenIsValid) {
           getCurrentPlayingTrack(token).then((data) => {
@@ -44,9 +44,9 @@ airtableBase('spotify').select({
 
 const trackDataHasLoaded = ref(false)
 
-const checkTokenValidity = (created: number, expiry: number) => {
+const checkTokenValidity = (created: number) => {
   const currentDate = new Date()
-  const expiryDate = new Date(expiry + created)
+  const expiryDate = new Date(created + 3000000)
 
   if (currentDate > expiryDate) {
     return false
@@ -70,20 +70,20 @@ const refreshAccessToken = async (refresh_token: string) => {
 
   const data = await response.json()
 
-  await updateAirtable(data.access_token, data.refresh_token, data.expires_in * 1000)
+  await updateAirtable(data.access_token, data.refresh_token)
   await getCurrentPlayingTrack(data.access_token).catch(() => {
     getRecentlyPlayedTracks(data.access_token)
   })
 }
 
-const updateAirtable = async (token: string, refresh: string, expiry: number) => {
+const updateAirtable = async (token: string, refresh: string) => {
   airtableBase('spotify').update([
     {
       id: recordId.value,
       fields: {
         token,
         refresh,
-        expiry: expiry * 1000,
+        // expiry: 3600 * 1000,
         created: Date.now(),
       }
     }
