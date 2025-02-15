@@ -4,7 +4,6 @@ import Airtable from 'airtable'
 Airtable.configure({ endpointUrl: 'https://api.airtable.com', apiKey: useRuntimeConfig().public.airtableAPIKey })
 const airtableBase = Airtable.base(useRuntimeConfig().public.airtableBase)
 const recordId = ref('')
-const refreshToken = ref('')
 
 airtableBase('spotify').select({
   view: 'Grid view',
@@ -20,24 +19,23 @@ airtableBase('spotify').select({
         const created: number = record.fields.created as number
         
         recordId.value = record.id
-        refreshToken.value = refresh
         
         const tokenIsValid = checkTokenValidity(created)
 
         if (tokenIsValid) {
           getCurrentPlayingTrack(token).then((data) => {
             if (data.error) {
-              refreshAccessToken()
+              refreshAccessToken(refresh)
             }
           }).catch(() => {
             getRecentlyPlayedTracks(token).then((data) => {
               if (data.error) {
-                refreshAccessToken()
+                refreshAccessToken(refresh)
               }
             })
           })
         } else {
-          refreshAccessToken()
+          refreshAccessToken(refresh)
         }
       }
     })
@@ -53,7 +51,7 @@ const checkTokenValidity = (created: number) => {
   return currentDate < expiryDate
 }
 
-const refreshAccessToken = async () => {
+const refreshAccessToken = async (refresh_token: string) => {
   const response = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
@@ -62,25 +60,27 @@ const refreshAccessToken = async () => {
     },
     body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token: refreshToken.value
+      refresh_token
     })
   })
 
   const data = await response.json()
 
-  await updateAirtable(data.access_token)
-  await getCurrentPlayingTrack(data.access_token).catch(() => {
-    getRecentlyPlayedTracks(data.access_token)
-  })
+  if (data && data.error === undefined) {
+    await updateAirtable(data.access_token, data.refresh_token)
+    await getCurrentPlayingTrack(data.access_token).catch(() => {
+      getRecentlyPlayedTracks(data.access_token)
+    })
+  }
 }
 
-const updateAirtable = async (token: string) => {
+const updateAirtable = async (token: string, refresh: string) => {
   airtableBase('spotify').update([
     {
       id: recordId.value,
       fields: {
         token,
-        refresh: refreshToken.value,
+        refresh,
         created: Date.now(),
       }
     }
