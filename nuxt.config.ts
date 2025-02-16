@@ -20,5 +20,10 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://iudoh.me'
-  }
+  },
+  build: {
+    transpile: [
+      'gsap'
+    ]
+  },
 })
