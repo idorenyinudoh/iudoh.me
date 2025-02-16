@@ -13,6 +13,10 @@ const socials = [
     title: 'X'
   },
   {
+    url: 'https://instagram.com/iudoh.me',
+    title: 'Instagram'
+  },
+  {
     url: 'https://www.linkedin.com/in/idorenyinudoh/',
     title: 'LinkedIn'
   },
@@ -35,10 +39,10 @@ const recentWorks = [
     image: 'workflow-architects-favicon.png',
     url: 'https://workflowarchitects.io/'
   },
-  {
-    image: 'david-blackmoore-favicon.png',
-    url: 'https://davidblackmooreonline.com/'
-  },
+  // {
+  //   image: 'david-blackmoore-favicon.png',
+  //   url: 'https://davidblackmooreonline.com/'
+  // },
   {
     image: 'aduragbemi-abiola-portfolio-favicon.png',
     url: 'https://adura.design/'
@@ -55,7 +59,7 @@ const recentWorks = [
 </script>
 
 <template>
-  <main class="flex-grow pl-6 sm:pl-7 md:pl-14 lg:pl-20 pr-6 sm:pr-7 md:pr-8 pt-9 sm:pt-10 md:pt-16 lg:pt-24 pb-7 sm:pb-8 rounded-xl md:rounded-2xl lg:rounded-3xl flex flex-col bg-[#F5F5F5] dark:bg-[#242424]">
+  <main class="flex-grow pl-6 sm:pl-7 md:pl-10 lg:pl-14 pr-6 sm:pr-7 md:pr-8 pt-9 sm:pt-10 md:pt-14 lg:pt-20 pb-7 sm:pb-8 rounded-xl md:rounded-2xl lg:rounded-3xl flex flex-col bg-[#F5F5F5] dark:bg-[#242424]">
     <Transition name="fade" mode="out-in" :duration="{ enter: 700, leave: 500 }">
       <p v-if="activeHeaderIndex === 0" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Frontend engineer</p>
       <p v-else-if="activeHeaderIndex === 1" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Technical writer</p>
@@ -66,8 +70,8 @@ const recentWorks = [
       <p v-else-if="activeHeaderIndex === 6" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Calisthenics fanatic</p>
       <p v-else-if="activeHeaderIndex === 7" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Web3 enthusiast</p>
     </Transition>
-    <h1 class="w-[90%] sm:w-[84%] mt-4 mb-20 text text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] xl:leading-[110%] font-medium">Crafting engaging interfaces and concise documentation, ensuring seamless digital solutions.</h1>
-    <div class="mb-28 flex flex-col md:flex-wrap md:flex-row gap-x-16 lg:gap-x-20 gap-y-12">
+    <h1 class="w-[90%] sm:w-[84%] mt-4 mb-20 lg:mb-24 text text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium">Crafting engaging interfaces and concise documentation, ensuring seamless digital solutions.</h1>
+    <div class="mb-28 flex flex-col md:flex-wrap md:flex-row gap-x-16 lg:gap-x-20 gap-y-12 sm:gap-y-10">
       <section class="flex flex-col gap-y-1.5 lg:gap-y-2">
         <h2 class="text-lg md:text-xl font-medium text-[#666666] dark:text-[#D1D1D1] tracking-tighter">Main folio status</h2>
         <p class="w-max py-1.5 md:py-2 pl-2.5 md:pl-3 pr-3.5 md:pr-4 flex gap-x-1.5 items-center rounded-[32px] bg-[#77F675]/10 dark:bg-[#CEFFCD]">
