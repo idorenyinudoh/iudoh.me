@@ -104,10 +104,3 @@ const recentWorks = [
     <NowPlaying />
   </main>
 </template>
-
-<style scoped>
-h1 {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  font-kerning: none;
-}
-</style>
