@@ -281,7 +281,7 @@ const calculateLastListened = () => {
 </script>
 
 <template>
-  <section class="mt-auto md:ml-auto max-w-max">
+  <section class="now-playing mt-auto md:ml-auto max-w-max opacity-0">
     <Transition name="fade" mode="out-in" :duration="{ enter: 700, leave: 500 }">
       <div v-if="trackDataHasLoaded" :class="['py-1.5 lg:py-2 pl-2 lg:pl-2.5 pr-7 lg:pr-8 rounded-[48px] flex gap-x-2 lg:gap-x-3 items-center bg-white dark:bg-[#3E3E3E]', playerIsActive ? 'outline outline-2 outline-[#EEEEEE] dark:outline-[#4D4D4D] animate-[ping_4s_linear_infinite_forwards] dark:animate-[dark-ping_4s_linear_infinite_forwards]' : 'border border-solid border-[#EEEEEE] dark:border-[#4D4D4D]']">
         <img src="~/assets/images/spotify.svg" alt="spotify logo" class="w-14 h-14">
