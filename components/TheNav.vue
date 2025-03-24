@@ -9,7 +9,7 @@ const changeColorMode = () => {
 </script>
 
 <template>
-  <nav class="mb-7 lg:mb-6 flex justify-between items-center opacity-0 h-0">
+  <nav class="mb-7 lg:mb-6 flex justify-between items-center opacity-0">
     <div class="flex-grow flex gap-x-[13.33%] items-center">
       <button class="hidden md:flex relative gap-x-2 items-center" @mouseover="agentIsHoveredOn = true" @mouseleave="agentIsHoveredOn = false">
         <img src="~/assets/icons/star-of-life.svg" alt="star of life" class="max-lg:w-5 max-lg:h-5 rotate">
