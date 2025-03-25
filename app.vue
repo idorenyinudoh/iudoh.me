@@ -31,11 +31,21 @@ useSeoMeta({
 })
 
 onMounted(() => {
+  const splitHeading = SplitType.create('h1', {
+    types: 'lines',
+    tagName: 'span'
+  })
+  gsap.set(splitHeading.lines, { opacity: 0 })
+
   const tl = gsap.timeline()
   tl.from('.root', { duration: 1.5, padding: '0', autoAlpha: 0, ease: 'power4.out' })
-  .to('main', { duration: 1, opacity: 1, ease: 'power4.out' }, '<')
-  .to(['.title', 'nav', 'h1', '.sections'], { duration: 1, opacity: 1, ease: 'power4.out' })
-  .to('.now-playing', { duration: 1, opacity: 1, ease: 'power4.out' }, '+=1')
+  .to('main', { duration: 1.5, opacity: 1, ease: 'power4.out' }, '<')
+  .to('nav', { duration: 2, opacity: 1, ease: 'power4.out' })
+  .to('h1', { duration: 1, opacity: 1, ease: 'power4.out' }, '<')
+  .to('.title', { duration: 2, opacity: 1, ease: 'power4.out' }, '-=0.5')
+  .fromTo(splitHeading.lines, { x: -25 }, { duration: 3, x: 0, opacity: 1, stagger: 0.5, ease: 'elastic.out' }, '<')
+  .fromTo('.sections > section', { scale: 0.9 }, { duration: 3, scale: 1, opacity: 1, stagger: 0.5, ease: 'elastic.out' }, '<')
+ .fromTo('.now-playing', { scale: 0.9 }, { duration: 2.5, scale: 1, opacity: 1, ease: 'elastic.out' }, '-=3')
 })
 </script>
 
