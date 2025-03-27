@@ -37,7 +37,7 @@ const socials = [
 const recentWorks = [
   {
     image: 'workflow-architects-favicon.png',
-    url: 'https://workflowarchitects.io/'
+    url: 'https://main.d1scst0n43xrzm.amplifyapp.com/'
   },
   // {
   //   image: 'david-blackmoore-favicon.png',
