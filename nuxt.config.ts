@@ -21,12 +21,6 @@ export default defineNuxtConfig({
   site: {
     url: 'https://iudoh.me'
   },
-  nitro: {
-    preset: 'cloudflare-pages',
-    experimental: {
-      wasm: true
-    }
-  },
   build: {
     transpile: [
       'gsap'
