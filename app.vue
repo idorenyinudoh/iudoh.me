@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
-import SplitType from 'split-type'
+import { SplitText } from 'gsap/SplitText'
+
+gsap.registerPlugin(SplitText)
 
 useHead({
   htmlAttrs: {
@@ -31,21 +33,31 @@ useSeoMeta({
 })
 
 onMounted(() => {
-  const splitHeading = SplitType.create('h1', {
-    types: 'lines',
-    tagName: 'span'
+  const splitHeading = SplitText.create('h1', {
+    type: 'lines',
+    autoSplit: true,
+    mask: 'lines'
   })
-  gsap.set(splitHeading.lines, { opacity: 0 })
+  
+  gsap.set('.root', { opacity: 0, scale: 0.98 })
+  gsap.set('nav', { opacity: 0, x: -12 })
+  gsap.set('main', { opacity: 0, y: 8 })
+  gsap.set('.title', { opacity: 0, scale: 0.95 })
+  gsap.set('h1', { opacity: 0, y: 8 })
+  gsap.set(splitHeading.lines, { opacity: 0, y: 24 })
+  gsap.set('.sections > section', { opacity: 0, x: 8, rotationY: 2 })
+  gsap.set('.now-playing', { opacity: 0, scale: 0.9, y: 4 })
 
-  const tl = gsap.timeline()
-  tl.from('.root', { duration: 1.5, padding: '0', autoAlpha: 0, ease: 'power4.out' })
-  .to('main', { duration: 1.5, opacity: 1, ease: 'power4.out' }, '<')
-  .to('nav', { duration: 2, opacity: 1, ease: 'power4.out' })
-  .to('h1', { duration: 1, opacity: 1, ease: 'power4.out' }, '<')
-  .to('.title', { duration: 2, opacity: 1, ease: 'power4.out' }, '-=0.5')
-  .fromTo(splitHeading.lines, { x: -25 }, { duration: 3, x: 0, opacity: 1, stagger: 0.5, ease: 'elastic.out' }, '<')
-  .fromTo('.sections > section', { scale: 0.9 }, { duration: 3, scale: 1, opacity: 1, stagger: 0.5, ease: 'elastic.out' }, '<')
- .fromTo('.now-playing', { scale: 0.9 }, { duration: 2.5, scale: 1, opacity: 1, ease: 'elastic.out' }, '-=3')
+  const tl = gsap.timeline({ delay: 0.3 })
+  
+  tl.to('.root', { duration: 2.2, opacity: 1, scale: 1, ease: 'power2.out' })
+  .to('nav', { duration: 1.7, opacity: 1, x: 0, ease: 'power2.out' }, '-=1.7')
+  .to('main', { duration: 1.7, opacity: 1, y: 0, ease: 'power2.out' }, '<')
+  .to('.title', { duration: 1.5, opacity: 1, scale: 1, ease: 'back.out(1.1)' }, '-=1.5')
+  .to('h1', { duration: 1.5, opacity: 1, y: 0, ease: 'power2.out' }, '<')
+  .to(splitHeading.lines, { duration: 1.2, opacity: 1, y: 0, stagger: 0.1, ease: 'power2.out' }, '-=1.3')
+  .to('.sections > section', { duration: 1.0, opacity: 1, x: 0, rotationY: 0, stagger: 0.08, ease: 'power2.out' }, '-=1.1')
+  .to('.now-playing', { duration: 1.0, opacity: 1, scale: 1, y: 0, ease: 'back.out(1.2)' }, '-=1.0')
 })
 </script>
 

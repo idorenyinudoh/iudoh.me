@@ -12,16 +12,15 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.4.1",
-    "@nuxtjs/sitemap": "^5.2.0",
+    "@nuxtjs/sitemap": "^7.3.1",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "airtable": "^0.12.2",
-    "nuxt": "^3.11.2",
+    "nuxt": "^3.17.5",
     "nuxt-gtag": "^1.1.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "gsap": "^3.12.7",
-    "split-type": "^0.3.4"
+    "gsap": "^3.12.7"
   }
 }
