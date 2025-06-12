@@ -36,6 +36,10 @@ const socials = [
 
 const recentWorks = [
   {
+    image: 'inbentori-favicon.png',
+    url: 'https://inventory.beingfemi.com/'
+  },
+  {
     image: 'workflow-architects-favicon.png',
     url: 'https://main.d1scst0n43xrzm.amplifyapp.com/'
   },
@@ -54,7 +58,7 @@ const recentWorks = [
   {
     image: 'tanwa-favicon.png',
     url: 'https://www.tanwa.app/'
-  }
+  },
 ]
 </script>
 
