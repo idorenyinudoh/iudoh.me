@@ -36,6 +36,10 @@ const socials = [
 
 const recentWorks = [
   {
+    image: 'cadobook-favicon.png',
+    url: 'https://cadobook.com/'
+  },
+  {
     image: 'inbentori-favicon.png',
     url: 'https://inventory.beingfemi.com/'
   },
@@ -43,10 +47,10 @@ const recentWorks = [
     image: 'workflow-architects-favicon.png',
     url: 'https://main.d1scst0n43xrzm.amplifyapp.com/'
   },
-  // {
-  //   image: 'david-blackmoore-favicon.png',
-  //   url: 'https://davidblackmooreonline.com/'
-  // },
+  {
+    image: 'david-blackmoore-favicon.png',
+    url: 'https://davidblackmoore.com/'
+  },
   {
     image: 'aduragbemi-abiola-portfolio-favicon.png',
     url: 'https://adura.design/'
