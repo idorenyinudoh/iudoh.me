@@ -2,7 +2,15 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'mint': '#5DDCBE',
+        'deep-green': '#2C9770',
+      },
+      fontFamily: {
+        'geist': ['Geist', 'system-ui', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
