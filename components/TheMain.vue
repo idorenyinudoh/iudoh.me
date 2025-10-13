@@ -36,6 +36,10 @@ const socials = [
 
 const recentWorks = [
   {
+    image: 'the-1897-favicon.png',
+    url: 'https://the1897.com/'
+  },
+  {
     image: 'cadobook-favicon.png',
     url: 'https://cadobook.com/'
   },
