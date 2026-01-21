@@ -1,11 +1,52 @@
 <script setup lang="ts">
-const activeHeaderIndex = ref(0)
+const colorMode = useColorMode()
 
-onMounted(() => {
-  setInterval(() => {
-    activeHeaderIndex.value = activeHeaderIndex.value >= 7 ? 0 : ++activeHeaderIndex.value
-  }, 10000)
-})
+const changeColorMode = () => {
+  colorMode.value = colorMode.value === 'light' ? 'dark' : 'light'
+}
+
+const projects = [
+  {
+    title: 'The 1897',
+    year: '2025',
+    url: 'https://the1897.com/'
+  },
+  // {
+  //   title: 'Cadobook',
+  //   year: '2025',
+  //   url: 'https://cadobook.com/'
+  // },
+  {
+    title: 'Inbentori',
+    year: '2025',
+    url: 'https://inventory.beingfemi.com/'
+  },
+  {
+    title: 'Workflow Architects',
+    year: '2024',
+    url: 'https://main.d1scst0n43xrzm.amplifyapp.com/'
+  },
+  {
+    title: 'David Blackmoore',
+    year: '2023',
+    url: 'https://davidblackmoore.com/'
+  },
+  {
+    title: 'Aduragbemi Abiola',
+    year: '2023',
+    url: 'https://adura.design/'
+  },
+  // {
+  //   title: 'Residentes en Revision',
+  //   year: '2023',
+  //   url: 'https://main.dxfansb9e0y0e.amplifyapp.com/'
+  // },
+  // {
+  //   title: 'Tanwa',
+  //   year: '2022',
+  //   url: 'https://www.tanwa.app/'
+  // },
+]
 
 const socials = [
   {
@@ -30,89 +71,55 @@ const socials = [
   },
   {
     url: 'mailto:idorenyinudoh10@outlook.com',
-    title: 'Mail'
+    title: 'Email'
   }
-]
-
-const recentWorks = [
-  {
-    image: 'the-1897-favicon.png',
-    url: 'https://the1897.com/'
-  },
-  {
-    image: 'cadobook-favicon.png',
-    url: 'https://cadobook.com/'
-  },
-  {
-    image: 'inbentori-favicon.png',
-    url: 'https://inventory.beingfemi.com/'
-  },
-  {
-    image: 'workflow-architects-favicon.png',
-    url: 'https://main.d1scst0n43xrzm.amplifyapp.com/'
-  },
-  {
-    image: 'david-blackmoore-favicon.png',
-    url: 'https://davidblackmoore.com/'
-  },
-  {
-    image: 'aduragbemi-abiola-portfolio-favicon.png',
-    url: 'https://adura.design/'
-  },
-  {
-    image: 'residentes-en-revision-favicon.png',
-    url: 'https://main.dxfansb9e0y0e.amplifyapp.com/'
-  },
-  {
-    image: 'tanwa-favicon.png',
-    url: 'https://www.tanwa.app/'
-  },
 ]
 </script>
 
 <template>
-  <main class="flex-grow pl-6 sm:pl-7 md:pl-10 lg:pl-16 pr-6 sm:pr-7 md:pr-8 pt-9 sm:pt-10 md:pt-14 lg:pt-20 pb-7 sm:pb-8 rounded-xl md:rounded-2xl lg:rounded-3xl flex flex-col bg-[#F5F5F5] dark:bg-[#242424] opacity-0">
-    <div class="title opacity-0">
-      <Transition name="fade" mode="out-in" :duration="{ enter: 700, leave: 500 }">
-        <p v-if="activeHeaderIndex === 0" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Frontend engineer</p>
-        <p v-else-if="activeHeaderIndex === 1" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Technical writer</p>
-        <p v-else-if="activeHeaderIndex === 2" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Hip-hop fan</p>
-        <p v-else-if="activeHeaderIndex === 3" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Open-source enthusiast</p>
-        <p v-else-if="activeHeaderIndex === 4" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Dashboard aficionado</p>
-        <p v-else-if="activeHeaderIndex === 5" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter"><NuxtLink to="https://adura.design" target="_blank" class="link">Adura</NuxtLink>'s other half</p>
-        <p v-else-if="activeHeaderIndex === 6" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Calisthenics fanatic</p>
-        <p v-else-if="activeHeaderIndex === 7" class="text text-lg md:text-xl lg:text-2xl font-normal tracking-tighter">Web3 enthusiast</p>
-      </Transition>
-    </div>
-    <h1 class="w-[90%] sm:w-[84%] mt-4 mb-20 lg:mb-24 text text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium opacity-0">Crafting engaging interfaces and concise documentation, ensuring seamless digital solutions.</h1>
-    <div class="sections mb-28 flex flex-col md:flex-wrap md:flex-row gap-x-16 lg:gap-x-20 gap-y-12 sm:gap-y-10">
-      <section class="flex flex-col gap-y-1.5 lg:gap-y-2 opacity-0">
-        <h2 class="text-lg md:text-xl font-medium text-[#666666] dark:text-[#D1D1D1] tracking-tighter">Main folio status</h2>
-        <p class="w-max py-1.5 md:py-2 pl-2.5 md:pl-3 pr-3.5 md:pr-4 flex gap-x-1.5 items-center rounded-[32px] bg-[#77F675]/10 dark:bg-[#CEFFCD]">
-          <img src="~/assets/icons/ellipse.svg" alt="ellipse">
-          <span class="text-base md:text-lg font-semibold text-[#0A7422] dark:text-[#0A7422] tracking-tighter">Almost completed</span>
-        </p>
-      </section>
-      <section class="flex flex-col gap-y-1.5 md:gap-y-2 opacity-0">
-        <h2 class="text-lg md:text-xl font-medium text-[#666666] dark:text-[#D1D1D1] tracking-tighter">Reach out</h2>
-        <div class="flex flex-wrap sm:items-center gap-x-3 md:gap-x-2 gap-y-2.5">
-          <template v-for="(social, index) in socials" :key="index">
-            <NuxtLink :to="social.url" target="_blank" class="text link text-xl md:text-2xl leading-7 font-normal">
+  <main class="p-6 md:p-4">
+    <section class="grid grid-cols-[1fr_max-content] md:grid-cols-12 gap-x-6 md:gap-x-2 gap-y-10">
+      <h1 class="md:col-span-2 text-5xl xl:text-6xl font-medium tracking-tighter md:fixed">
+        Idorenyin <br class="max-md:hidden"> Udoh
+      </h1>
+      <p class="max-md:row-start-2 md:col-start-5 xl:col-start-6 col-span-2 md:col-span-4 text-5xl xl:text-6xl font-medium tracking-tighter">Frontend <br> Engineer</p>
+      <p class="max-md:hidden md:row-start-1 md:col-start-11 md:col-span-2 text-base font-medium tracking-tighter">Full site soon</p>
+      <ColorScheme placeholder="" tag="div">
+        <button :class="['col-start-2 md:col-start-12 row-start-1 justify-self-end mt-[5px] w-5 md:w-3 h-5 md:h-3 rounded-full', colorMode.value === 'light' ? 'bg-black' : 'bg-white']" @click="changeColorMode" />
+      </ColorScheme>
+    </section>
+    <section class="my-28 md:my-60 grid grid-cols-12 gap-x-2">
+      <div class="md:col-start-5 xl:col-start-6 col-span-7 flex flex-col gap-y-10">
+        <h2 class="text-base font-medium tracking-tighter">Recent works</h2>
+        <ul class="max-sm:flex max-sm:flex-col max-sm:gap-y-2">
+          <li v-for="(project, index) in projects" :key="index">
+            <NuxtLink
+              :to="project.url"
+              target="_blank"
+              class="relative text-5xl xl:text-6xl font-medium tracking-tighter group md:hover:underline"
+            >
+              {{ project.title }}
+              <span class="hidden md:group-hover:block absolute top-0 left-full ml-2 text-base tracking-tighter">({{ project.year }})</span>
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="mb-28 md:mb-60 grid grid-cols-12 gap-x-2">
+      <div class="md:col-start-5 xl:col-start-6 col-span-7 flex flex-col gap-y-10">
+        <h2 class="text-base font-medium tracking-tighter">Contact</h2>
+        <ul>
+          <li v-for="(social, index) in socials" :key="index">
+            <NuxtLink
+              :to="social.url"
+              target="_blank"
+              class="text-5xl xl:text-6xl font-medium tracking-tighter group hover:underline"
+            >
               {{ social.title }}
             </NuxtLink>
-            <img v-if="index !== socials.length - 1" src="~/assets/icons/middle-dot.svg" alt="middle dot">
-          </template>
-        </div>
-      </section>
-      <section class="flex flex-col gap-y-1.5 md:gap-y-2 opacity-0">
-        <h2 class="text-lg md:text-xl font-medium text-[#666666] dark:text-[#D1D1D1] tracking-tighter">Recent works</h2>
-        <div class="flex flex-wrap gap-3 lg:gap-2.5 items-center">
-          <NuxtLink v-for="(work, index) in recentWorks" :key="index" :to="work.url" target="_blank" class="hover:brightness-90 dark:hover:brightness-75 transition-all duration-200 ease-linear">
-            <img :src="`/images/${work.image}`" alt="" class="w-14 lg:w-12 h-14 lg:h-12 rounded-full">
-          </NuxtLink>
-        </div>
-      </section>
-    </div>
-    <NowPlaying />
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 </template>

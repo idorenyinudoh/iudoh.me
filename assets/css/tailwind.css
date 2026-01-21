@@ -2,86 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-Black.otf') format('opentype');
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-Light.otf') format('opentype');
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-UltraLight.otf') format('opentype');
-  font-weight: 200;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('~/assets/fonts/geist/Geist-UltraBlack.otf') format('opentype');
-  font-weight: 900;
-  font-display: swap;
-}
-
 @layer base {
   html {
     font-family: 'Geist', system-ui, sans-serif;
+    font-kerning: none;
+    font-smoothing: antialiased;
   }
-}
 
-@layer components {
-  .text {
-    @apply text-[#1A1A1A] dark:text-white tracking-tighter;
+  body {
+    @apply bg-white dark:bg-black text-black dark:text-white;
   }
-  .link {
-    @apply relative before:absolute before:bottom-[1px] before:left-0 before:w-full before:h-[1px] before:bg-[#1A1A1A] before:dark:bg-white before:scale-x-0 before:origin-[100%] hover:before:scale-x-100 hover:before:origin-[0] before:transition-transform before:duration-500 before:ease-linear hover:before:ease-in-out;
-  }
-}
-
-body * {
-  @apply transition-colors duration-200 ease-linear;
 }
 
 .fade-enter-active,
