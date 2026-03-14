@@ -7,6 +7,11 @@ const changeColorMode = () => {
 
 const projects = [
   {
+    title: 'Damilola Akinlua',
+    year: '2026',
+    url: 'https://devdami.live/'
+  },
+  {
     title: 'The 1897',
     year: '2025',
     url: 'https://the1897.com/'
