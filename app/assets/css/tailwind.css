@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {
@@ -12,14 +12,9 @@
   body {
     @apply bg-white dark:bg-black text-black dark:text-white;
   }
-}
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s linear;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }

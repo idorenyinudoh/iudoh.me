@@ -10,17 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxtjs/color-mode": "^3.4.1",
-    "@nuxtjs/sitemap": "^7.3.1",
-    "@nuxtjs/tailwindcss": "^6.12.0",
-    "airtable": "^0.12.2",
-    "nuxt": "^3.17.5",
-    "nuxt-gtag": "^1.1.1",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "@nuxtjs/color-mode": "^4.1.0",
+    "@nuxtjs/sitemap": "^9.1.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "nuxt": "^4.6.3",
+    "nuxt-gtag": "^5.0.0",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.6.5"
   },
-  "dependencies": {
-    "gsap": "^3.12.7"
+  "engines": {
+    "node": ">=22.22.3"
   }
 }
